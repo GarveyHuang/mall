@@ -110,7 +110,7 @@
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid-spring-boot-starter</artifactId>
-                <version>${hutool.version}</version>
+                <version>${druid.version}</version>
             </dependency>
 
             <!-- Hutool Java 工具包 -->
@@ -143,7 +143,7 @@
             <dependency>
                 <groupId>org.mybatis</groupId>
                 <artifactId>mybatis</artifactId>
-                <version>${mybatis.version}}</version>
+                <version>${mybatis.version}</version>
             </dependency>
 
             <!-- MySQL 数据库驱动 -->
