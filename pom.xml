@@ -23,6 +23,7 @@
         <module>mall-mbg</module>
         <module>mall-api</module>
         <module>mall-common</module>
+        <module>mall-security</module>
     </modules>
 
     <properties>
@@ -91,6 +92,11 @@
             </dependency>
 
             <!-- mall 安全模块 -->
+            <dependency>
+                <groupId>com.shura</groupId>
+                <artifactId>mall-security</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
 
             <!-- MyBatis 分页插件 starter -->
             <dependency>
