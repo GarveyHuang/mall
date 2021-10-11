@@ -1,0 +1,48 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/mall?serverTimezone=UTC&useSSL=false&useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password:
+    druid:
+      initial-size: 5 # 连接池初始化大小
+      min-idle: 10 # 最小空闲连接数
+      max-active: 20 # 最大连接数
+      max-wait: 60000
+      web-stat-filter:
+        exclusions: "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*"  # 不统计这些请求数据
+      stat-view-servlet: # 访问监控网页的登录用户名和密码
+        login-username: druid
+        login-password: druid
+      validation-query:  SELECT 1 FROM DUAL
+
+mybatis:
+  mapper-locations:
+    - classpath:dao/*.xml
+    - classpath:com/**/mapper/*.xml
+
+jwt:
+  tokenHeader: Authorization # JWT 存储的请求头
+  secret: mall-admin-secret # JWT 加解密使用的密钥
+  exparition: 604800 # JWT 的过期时间（60 * 60 * 24）
+  tokenHead: Bearer # JWT 负载中拿到开头
+
+secure:
+  ingored:
+    urls: # 安全路径白名单
+      - /swagger-ui.html
+      - /swagger-resources/**
+      - /swagger/**
+      - /**/v2/api-docs
+      - /**/*.js
+      - /**/*.css
+      - /**/*.png
+      - /**/*.ico
+      - /webjars/springfox-swagger-ui/**
+      - /actuator/**
+      - /druid/**
+      - /admin/login
+      - /admin/register
+      - /upload/product/**
