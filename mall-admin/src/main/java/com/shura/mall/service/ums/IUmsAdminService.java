@@ -1,6 +1,6 @@
 package com.shura.mall.service.ums;
 
-import com.shura.mall.dto.UmsAdminRegisterParam;
+import com.shura.mall.dto.ums.UmsAdminRegisterParam;
 import com.shura.mall.model.ums.UmsAdmin;
 import com.shura.mall.model.ums.UmsPermission;
 import com.shura.mall.model.ums.UmsRole;

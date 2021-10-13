@@ -1,4 +1,4 @@
-package com.shura.mall.dto;
+package com.shura.mall.dto.ums;
 
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Getter;

@@ -1,4 +1,4 @@
-package com.shura.mall.dao;
+package com.shura.mall.dao.ums;
 
 import com.shura.mall.model.ums.UmsAdminRoleRelation;
 import com.shura.mall.model.ums.UmsPermission;
