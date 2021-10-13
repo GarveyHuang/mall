@@ -40,7 +40,7 @@ import java.util.stream.Collectors;
  * @date: 2021/10/11
  * @description: IUmsAdminService 实现类
  */
-@Service
+@Service("adminService")
 public class UmsAdminServiceImpl implements IUmsAdminService {
     private static final Logger LOGGER = LoggerFactory.getLogger(UmsAdminServiceImpl.class);
 
