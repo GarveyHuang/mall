@@ -6,7 +6,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.18.RELEASE</version>
+        <version>2.1.17.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
@@ -24,6 +24,7 @@
         <module>mall-api</module>
         <module>mall-common</module>
         <module>mall-security</module>
+        <module>mall-member</module>
     </modules>
 
     <properties>
@@ -45,15 +46,25 @@
         <aliyun-oss.version>2.5.0</aliyun-oss.version>
         <logstash-logback.version>5.3</logstash-logback.version>
         <admin-starter-server.version>2.1.2</admin-starter-server.version>
-        <tulingmall-common.version>1.0-SNAPSHOT</tulingmall-common.version>
-        <tulingmall-mbg.version>1.0-SNAPSHOT</tulingmall-mbg.version>
-        <tulingmall-security.version>1.0-SNAPSHOT</tulingmall-security.version>
+        <mall-common.version>1.0-SNAPSHOT</mall-common.version>
+        <mall-mbg.version>0.0.1-SNAPSHOT</mall-mbg.version>
+        <mall-security.version>1.0-SNAPSHOT</mall-security.version>
+        <spring-boot.version>2.1.17.RELEASE</spring-boot.version>
         <spring-cloud.version>Greenwich.SR3</spring-cloud.version>
         <spring-cloud-alibaba.version>2.1.2.RELEASE</spring-cloud-alibaba.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+            <!-- Spring Boot 相关依赖 -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
             <!-- Spring Cloud 相关依赖 -->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
@@ -81,21 +92,21 @@
             <dependency>
                 <groupId>com.shura</groupId>
                 <artifactId>mall-common</artifactId>
-                <version>1.0-SNAPSHOT</version>
+                <version>${mall-common.version}</version>
             </dependency>
 
             <!-- mall MBG 生成模块 -->
             <dependency>
                 <groupId>com.shura</groupId>
                 <artifactId>mall-mbg</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
+                <version>${mall-mbg.version}</version>
             </dependency>
 
             <!-- mall 安全模块 -->
             <dependency>
                 <groupId>com.shura</groupId>
                 <artifactId>mall-security</artifactId>
-                <version>1.0-SNAPSHOT</version>
+                <version>${mall-security.version}</version>
             </dependency>
 
             <!-- MyBatis 分页插件 starter -->
@@ -208,5 +219,4 @@
             </snapshots>
         </repository>
     </repositories>
-
 </project>
