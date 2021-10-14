@@ -1,9 +1,12 @@
 package com.shura.mall.service.pms.impl;
 
+import com.shura.mall.dao.cms.CmsPreferenceAreaProductRelationDAO;
+import com.shura.mall.dao.cms.CmsSubjectProductRelationDAO;
+import com.shura.mall.dao.pms.*;
 import com.shura.mall.dto.pms.PmsProductParam;
 import com.shura.mall.dto.pms.PmsProductQueryParam;
 import com.shura.mall.dto.pms.PmsProductResult;
-import com.shura.mall.mapper.PmsProductMapper;
+import com.shura.mall.mapper.*;
 import com.shura.mall.model.pms.PmsProduct;
 import com.shura.mall.model.pms.PmsSkuStock;
 import com.shura.mall.service.pms.IPmsProductService;
@@ -32,6 +35,48 @@ public class PmsProductServiceImpl implements IPmsProductService {
     @Autowired
     private PmsProductMapper productMapper;
 
+    @Autowired
+    private PmsMemberPriceMapper memberPriceMapper;
+
+    @Autowired
+    private PmsMemberPriceDAO memberPriceDAO;
+
+    @Autowired
+    private PmsProductLadderMapper pmsProductLadderMapper;
+
+    @Autowired
+    private PmsProductLadderDAO productLadderDAO;
+
+    @Autowired
+    private PmsProductFullReductionMapper productFullReductionMapper;
+
+    @Autowired
+    private PmsProductFullReductionDAO productFullReductionDAO;
+
+    @Autowired
+    private PmsSkuStockMapper skuStockMapper;
+
+    @Autowired
+    private PmsSkuStockDAO skuStockDAO;
+
+    @Autowired
+    private PmsProductAttributeValueMapper productAttributeValueMapper;
+
+    @Autowired
+    private PmsProductAttributeValueDAO productAttributeValueDAO;
+
+    @Autowired
+    private CmsSubjectProductRelationMapper subjectProductRelationMapper;
+
+    @Autowired
+    private CmsSubjectProductRelationDAO subjectProductRelationDAO;
+
+    @Autowired
+    private CmsPreferenceAreaProductRelationMapper preferenceAreaProductRelationMapper;
+
+    @Autowired
+    private CmsPreferenceAreaProductRelationDAO preferenceAreaProductRelationDAO;
+
     @Override
     public int create(PmsProductParam productParam) {
         // 创建商品
@@ -46,7 +91,7 @@ public class PmsProductServiceImpl implements IPmsProductService {
         // 阶梯价格
         relateAndInsertList(productLadderDAO, productParam.getProductLadderList(), productId);
         // 满减价格
-        relateAndInsertList(productFullReducetionDAO, productParam.getProductFullReductionList(), productId);
+        relateAndInsertList(productFullReductionDAO, productParam.getProductFullReductionList(), productId);
         // 处理 sku 的编码
         handleSkuStockCode(productParam.getSkuStockList(), productId);
         // 添加 sku 库存信息
