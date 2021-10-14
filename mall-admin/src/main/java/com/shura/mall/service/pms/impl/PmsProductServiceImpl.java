@@ -7,8 +7,9 @@ import com.shura.mall.dto.pms.PmsProductParam;
 import com.shura.mall.dto.pms.PmsProductQueryParam;
 import com.shura.mall.dto.pms.PmsProductResult;
 import com.shura.mall.mapper.*;
-import com.shura.mall.model.pms.PmsProduct;
-import com.shura.mall.model.pms.PmsSkuStock;
+import com.shura.mall.model.cms.CmsPreferenceAreaProductRelationExample;
+import com.shura.mall.model.cms.CmsSubjectProductRelationExample;
+import com.shura.mall.model.pms.*;
 import com.shura.mall.service.pms.IPmsProductService;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
@@ -36,13 +37,16 @@ public class PmsProductServiceImpl implements IPmsProductService {
     private PmsProductMapper productMapper;
 
     @Autowired
+    private PmsProductDAO productDAO;
+
+    @Autowired
     private PmsMemberPriceMapper memberPriceMapper;
 
     @Autowired
     private PmsMemberPriceDAO memberPriceDAO;
 
     @Autowired
-    private PmsProductLadderMapper pmsProductLadderMapper;
+    private PmsProductLadderMapper productLadderMapper;
 
     @Autowired
     private PmsProductLadderDAO productLadderDAO;
@@ -108,12 +112,60 @@ public class PmsProductServiceImpl implements IPmsProductService {
 
     @Override
     public PmsProductResult getUpdateInfo(Long id) {
-        return null;
+        return productDAO.getUpdateInfo(id);
     }
 
     @Override
     public int update(Long id, PmsProductParam productParam) {
-        return 0;
+        // 更新商品信息
+        PmsProduct product = productParam;
+        product.setId(id);
+        productMapper.updateByPrimaryKeySelective(product);
+
+        // 更新会员价格
+        PmsMemberPriceExample memberPriceExample = new PmsMemberPriceExample();
+        memberPriceExample.createCriteria().andProductIdEqualTo(id);
+        memberPriceMapper.deleteByExample(memberPriceExample);
+        relateAndInsertList(memberPriceDAO, productParam.getMemberPriceList(), id);
+
+        // 更新阶梯价格
+        PmsProductLadderExample productLadderExample = new PmsProductLadderExample();
+        productLadderExample.createCriteria().andProductIdEqualTo(id);
+        productLadderMapper.deleteByExample(productLadderExample);
+        relateAndInsertList(productLadderDAO, productParam.getProductLadderList(), id);
+
+        // 更新满减价格
+        PmsProductFullReductionExample fullReductionExample = new PmsProductFullReductionExample();
+        fullReductionExample.createCriteria().andProductIdEqualTo(id);
+        productFullReductionMapper.deleteByExample(fullReductionExample);
+        relateAndInsertList(productFullReductionDAO, productParam.getProductFullReductionList(), id);
+
+        // 更新 sku 库存信息
+        PmsSkuStockExample skuStockExample = new PmsSkuStockExample();
+        skuStockExample.createCriteria().andProductIdEqualTo(id);
+        skuStockMapper.deleteByExample(skuStockExample);
+        handleSkuStockCode(productParam.getSkuStockList(), id);
+        relateAndInsertList(skuStockDAO, productParam.getSkuStockList(), id);
+
+        // 更新商品参数、自定义商品规格
+        PmsProductAttributeValueExample attributeValueExample = new PmsProductAttributeValueExample();
+        attributeValueExample.createCriteria().andProductIdEqualTo(id);
+        productAttributeValueMapper.deleteByExample(attributeValueExample);
+        relateAndInsertList(productAttributeValueDAO, productParam.getProductAttributeValueList(), id);
+
+        // 更新关联专题
+        CmsSubjectProductRelationExample subjectProductRelationExample = new CmsSubjectProductRelationExample();
+        subjectProductRelationExample.createCriteria().andProductIdEqualTo(id);
+        subjectProductRelationMapper.deleteByExample(subjectProductRelationExample);
+        relateAndInsertList(subjectProductRelationDAO, productParam.getSubjectProductRelationList(), id);
+
+        // 更新关联优选
+        CmsPreferenceAreaProductRelationExample preferenceAreaProductRelationExample = new CmsPreferenceAreaProductRelationExample();
+        preferenceAreaProductRelationExample.createCriteria().andProductIdEqualTo(id);
+        preferenceAreaProductRelationMapper.deleteByExample(preferenceAreaProductRelationExample);
+        relateAndInsertList(preferenceAreaProductRelationDAO, productParam.getPreferenceAreaProductRelationList(), id);
+
+        return 1;
     }
 
     @Override
