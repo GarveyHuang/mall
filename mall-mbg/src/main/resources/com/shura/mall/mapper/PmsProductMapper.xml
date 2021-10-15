@@ -5,7 +5,7 @@
     <id column="id" jdbcType="BIGINT" property="id" />
     <result column="brand_id" jdbcType="BIGINT" property="brandId" />
     <result column="product_category_id" jdbcType="BIGINT" property="productCategoryId" />
-    <result column="feight_template_id" jdbcType="BIGINT" property="feightTemplateId" />
+    <result column="freight_template_id" jdbcType="BIGINT" property="freightTemplateId" />
     <result column="product_attribute_category_id" jdbcType="BIGINT" property="productAttributeCategoryId" />
     <result column="name" jdbcType="VARCHAR" property="name" />
     <result column="pic" jdbcType="VARCHAR" property="pic" />
@@ -13,7 +13,7 @@
     <result column="delete_status" jdbcType="INTEGER" property="deleteStatus" />
     <result column="publish_status" jdbcType="INTEGER" property="publishStatus" />
     <result column="new_status" jdbcType="INTEGER" property="newStatus" />
-    <result column="recommand_status" jdbcType="INTEGER" property="recommandStatus" />
+    <result column="recommend_status" jdbcType="INTEGER" property="recommendStatus" />
     <result column="verify_status" jdbcType="INTEGER" property="verifyStatus" />
     <result column="sort" jdbcType="INTEGER" property="sort" />
     <result column="sale" jdbcType="INTEGER" property="sale" />
@@ -106,8 +106,8 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id, brand_id, product_category_id, feight_template_id, product_attribute_category_id, 
-    name, pic, product_sn, delete_status, publish_status, new_status, recommand_status, 
+    id, brand_id, product_category_id, freight_template_id, product_attribute_category_id, 
+    name, pic, product_sn, delete_status, publish_status, new_status, recommend_status, 
     verify_status, sort, sale, price, promotion_price, gift_growth, gift_point, use_point_limit, 
     sub_title, original_price, stock, low_stock, unit, weight, preview_status, service_ids, 
     keywords, note, album_pics, detail_title, promotion_start_time, promotion_end_time, 
@@ -167,10 +167,10 @@
     </if>
   </delete>
   <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.shura.mall.model.pms.PmsProduct" useGeneratedKeys="true">
-    insert into pms_product (brand_id, product_category_id, feight_template_id, 
+    insert into pms_product (brand_id, product_category_id, freight_template_id, 
       product_attribute_category_id, name, pic, 
       product_sn, delete_status, publish_status, 
-      new_status, recommand_status, verify_status, 
+      new_status, recommend_status, verify_status, 
       sort, sale, price, 
       promotion_price, gift_growth, gift_point, 
       use_point_limit, sub_title, original_price, 
@@ -181,10 +181,10 @@
       promotion_per_limit, promotion_type, brand_name, 
       product_category_name, description, detail_desc, 
       detail_html, detail_mobile_html)
-    values (#{brandId,jdbcType=BIGINT}, #{productCategoryId,jdbcType=BIGINT}, #{feightTemplateId,jdbcType=BIGINT}, 
+    values (#{brandId,jdbcType=BIGINT}, #{productCategoryId,jdbcType=BIGINT}, #{freightTemplateId,jdbcType=BIGINT}, 
       #{productAttributeCategoryId,jdbcType=BIGINT}, #{name,jdbcType=VARCHAR}, #{pic,jdbcType=VARCHAR}, 
       #{productSn,jdbcType=VARCHAR}, #{deleteStatus,jdbcType=INTEGER}, #{publishStatus,jdbcType=INTEGER}, 
-      #{newStatus,jdbcType=INTEGER}, #{recommandStatus,jdbcType=INTEGER}, #{verifyStatus,jdbcType=INTEGER}, 
+      #{newStatus,jdbcType=INTEGER}, #{recommendStatus,jdbcType=INTEGER}, #{verifyStatus,jdbcType=INTEGER}, 
       #{sort,jdbcType=INTEGER}, #{sale,jdbcType=INTEGER}, #{price,jdbcType=DECIMAL}, 
       #{promotionPrice,jdbcType=DECIMAL}, #{giftGrowth,jdbcType=INTEGER}, #{giftPoint,jdbcType=INTEGER}, 
       #{usePointLimit,jdbcType=INTEGER}, #{subTitle,jdbcType=VARCHAR}, #{originalPrice,jdbcType=DECIMAL}, 
@@ -205,8 +205,8 @@
       <if test="productCategoryId != null">
         product_category_id,
       </if>
-      <if test="feightTemplateId != null">
-        feight_template_id,
+      <if test="freightTemplateId != null">
+        freight_template_id,
       </if>
       <if test="productAttributeCategoryId != null">
         product_attribute_category_id,
@@ -229,8 +229,8 @@
       <if test="newStatus != null">
         new_status,
       </if>
-      <if test="recommandStatus != null">
-        recommand_status,
+      <if test="recommendStatus != null">
+        recommend_status,
       </if>
       <if test="verifyStatus != null">
         verify_status,
@@ -330,8 +330,8 @@
       <if test="productCategoryId != null">
         #{productCategoryId,jdbcType=BIGINT},
       </if>
-      <if test="feightTemplateId != null">
-        #{feightTemplateId,jdbcType=BIGINT},
+      <if test="freightTemplateId != null">
+        #{freightTemplateId,jdbcType=BIGINT},
       </if>
       <if test="productAttributeCategoryId != null">
         #{productAttributeCategoryId,jdbcType=BIGINT},
@@ -354,8 +354,8 @@
       <if test="newStatus != null">
         #{newStatus,jdbcType=INTEGER},
       </if>
-      <if test="recommandStatus != null">
-        #{recommandStatus,jdbcType=INTEGER},
+      <if test="recommendStatus != null">
+        #{recommendStatus,jdbcType=INTEGER},
       </if>
       <if test="verifyStatus != null">
         #{verifyStatus,jdbcType=INTEGER},
@@ -467,8 +467,8 @@
       <if test="record.productCategoryId != null">
         product_category_id = #{record.productCategoryId,jdbcType=BIGINT},
       </if>
-      <if test="record.feightTemplateId != null">
-        feight_template_id = #{record.feightTemplateId,jdbcType=BIGINT},
+      <if test="record.freightTemplateId != null">
+        freight_template_id = #{record.freightTemplateId,jdbcType=BIGINT},
       </if>
       <if test="record.productAttributeCategoryId != null">
         product_attribute_category_id = #{record.productAttributeCategoryId,jdbcType=BIGINT},
@@ -491,8 +491,8 @@
       <if test="record.newStatus != null">
         new_status = #{record.newStatus,jdbcType=INTEGER},
       </if>
-      <if test="record.recommandStatus != null">
-        recommand_status = #{record.recommandStatus,jdbcType=INTEGER},
+      <if test="record.recommendStatus != null">
+        recommend_status = #{record.recommendStatus,jdbcType=INTEGER},
       </if>
       <if test="record.verifyStatus != null">
         verify_status = #{record.verifyStatus,jdbcType=INTEGER},
@@ -594,7 +594,7 @@
     set id = #{record.id,jdbcType=BIGINT},
       brand_id = #{record.brandId,jdbcType=BIGINT},
       product_category_id = #{record.productCategoryId,jdbcType=BIGINT},
-      feight_template_id = #{record.feightTemplateId,jdbcType=BIGINT},
+      freight_template_id = #{record.freightTemplateId,jdbcType=BIGINT},
       product_attribute_category_id = #{record.productAttributeCategoryId,jdbcType=BIGINT},
       name = #{record.name,jdbcType=VARCHAR},
       pic = #{record.pic,jdbcType=VARCHAR},
@@ -602,7 +602,7 @@
       delete_status = #{record.deleteStatus,jdbcType=INTEGER},
       publish_status = #{record.publishStatus,jdbcType=INTEGER},
       new_status = #{record.newStatus,jdbcType=INTEGER},
-      recommand_status = #{record.recommandStatus,jdbcType=INTEGER},
+      recommend_status = #{record.recommendStatus,jdbcType=INTEGER},
       verify_status = #{record.verifyStatus,jdbcType=INTEGER},
       sort = #{record.sort,jdbcType=INTEGER},
       sale = #{record.sale,jdbcType=INTEGER},
@@ -642,7 +642,7 @@
     set id = #{record.id,jdbcType=BIGINT},
       brand_id = #{record.brandId,jdbcType=BIGINT},
       product_category_id = #{record.productCategoryId,jdbcType=BIGINT},
-      feight_template_id = #{record.feightTemplateId,jdbcType=BIGINT},
+      freight_template_id = #{record.freightTemplateId,jdbcType=BIGINT},
       product_attribute_category_id = #{record.productAttributeCategoryId,jdbcType=BIGINT},
       name = #{record.name,jdbcType=VARCHAR},
       pic = #{record.pic,jdbcType=VARCHAR},
@@ -650,7 +650,7 @@
       delete_status = #{record.deleteStatus,jdbcType=INTEGER},
       publish_status = #{record.publishStatus,jdbcType=INTEGER},
       new_status = #{record.newStatus,jdbcType=INTEGER},
-      recommand_status = #{record.recommandStatus,jdbcType=INTEGER},
+      recommend_status = #{record.recommendStatus,jdbcType=INTEGER},
       verify_status = #{record.verifyStatus,jdbcType=INTEGER},
       sort = #{record.sort,jdbcType=INTEGER},
       sale = #{record.sale,jdbcType=INTEGER},
@@ -690,8 +690,8 @@
       <if test="productCategoryId != null">
         product_category_id = #{productCategoryId,jdbcType=BIGINT},
       </if>
-      <if test="feightTemplateId != null">
-        feight_template_id = #{feightTemplateId,jdbcType=BIGINT},
+      <if test="freightTemplateId != null">
+        freight_template_id = #{freightTemplateId,jdbcType=BIGINT},
       </if>
       <if test="productAttributeCategoryId != null">
         product_attribute_category_id = #{productAttributeCategoryId,jdbcType=BIGINT},
@@ -714,8 +714,8 @@
       <if test="newStatus != null">
         new_status = #{newStatus,jdbcType=INTEGER},
       </if>
-      <if test="recommandStatus != null">
-        recommand_status = #{recommandStatus,jdbcType=INTEGER},
+      <if test="recommendStatus != null">
+        recommend_status = #{recommendStatus,jdbcType=INTEGER},
       </if>
       <if test="verifyStatus != null">
         verify_status = #{verifyStatus,jdbcType=INTEGER},
@@ -814,7 +814,7 @@
     update pms_product
     set brand_id = #{brandId,jdbcType=BIGINT},
       product_category_id = #{productCategoryId,jdbcType=BIGINT},
-      feight_template_id = #{feightTemplateId,jdbcType=BIGINT},
+      freight_template_id = #{freightTemplateId,jdbcType=BIGINT},
       product_attribute_category_id = #{productAttributeCategoryId,jdbcType=BIGINT},
       name = #{name,jdbcType=VARCHAR},
       pic = #{pic,jdbcType=VARCHAR},
@@ -822,7 +822,7 @@
       delete_status = #{deleteStatus,jdbcType=INTEGER},
       publish_status = #{publishStatus,jdbcType=INTEGER},
       new_status = #{newStatus,jdbcType=INTEGER},
-      recommand_status = #{recommandStatus,jdbcType=INTEGER},
+      recommend_status = #{recommendStatus,jdbcType=INTEGER},
       verify_status = #{verifyStatus,jdbcType=INTEGER},
       sort = #{sort,jdbcType=INTEGER},
       sale = #{sale,jdbcType=INTEGER},
@@ -859,7 +859,7 @@
     update pms_product
     set brand_id = #{brandId,jdbcType=BIGINT},
       product_category_id = #{productCategoryId,jdbcType=BIGINT},
-      feight_template_id = #{feightTemplateId,jdbcType=BIGINT},
+      freight_template_id = #{freightTemplateId,jdbcType=BIGINT},
       product_attribute_category_id = #{productAttributeCategoryId,jdbcType=BIGINT},
       name = #{name,jdbcType=VARCHAR},
       pic = #{pic,jdbcType=VARCHAR},
@@ -867,7 +867,7 @@
       delete_status = #{deleteStatus,jdbcType=INTEGER},
       publish_status = #{publishStatus,jdbcType=INTEGER},
       new_status = #{newStatus,jdbcType=INTEGER},
-      recommand_status = #{recommandStatus,jdbcType=INTEGER},
+      recommend_status = #{recommendStatus,jdbcType=INTEGER},
       verify_status = #{verifyStatus,jdbcType=INTEGER},
       sort = #{sort,jdbcType=INTEGER},
       sale = #{sale,jdbcType=INTEGER},

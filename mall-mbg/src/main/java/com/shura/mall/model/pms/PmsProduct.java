@@ -6,25 +6,24 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 public class PmsProduct implements Serializable {
-    @ApiModelProperty(value = "ID")
     private Long id;
 
-    @ApiModelProperty(value = "品牌id")
+    @ApiModelProperty(value = "品牌 id")
     private Long brandId;
 
-    @ApiModelProperty(value = "商品分类id")
+    @ApiModelProperty(value = "商品分类 id")
     private Long productCategoryId;
 
-    @ApiModelProperty(value = "模版id")
-    private Long feightTemplateId;
+    @ApiModelProperty(value = "运费模版 id")
+    private Long freightTemplateId;
 
-    @ApiModelProperty(value = "商品属性分类id")
+    @ApiModelProperty(value = "商品属性分类 id")
     private Long productAttributeCategoryId;
 
     @ApiModelProperty(value = "商品名称")
     private String name;
 
-    @ApiModelProperty(value = "图片")
+    @ApiModelProperty(value = "商品图片")
     private String pic;
 
     @ApiModelProperty(value = "货号")
@@ -40,7 +39,7 @@ public class PmsProduct implements Serializable {
     private Integer newStatus;
 
     @ApiModelProperty(value = "推荐状态；0->不推荐；1->推荐")
-    private Integer recommandStatus;
+    private Integer recommendStatus;
 
     @ApiModelProperty(value = "审核状态：0->未审核；1->审核通过")
     private Integer verifyStatus;
@@ -51,7 +50,7 @@ public class PmsProduct implements Serializable {
     @ApiModelProperty(value = "销量")
     private Integer sale;
 
-    @ApiModelProperty(value = "销售价格")
+    @ApiModelProperty(value = "价格")
     private BigDecimal price;
 
     @ApiModelProperty(value = "促销价格")
@@ -93,13 +92,13 @@ public class PmsProduct implements Serializable {
     @ApiModelProperty(value = "关键词")
     private String keywords;
 
-    @ApiModelProperty(value = "备注")
+    @ApiModelProperty(value = "备注信息")
     private String note;
 
     @ApiModelProperty(value = "画册图片，连产品图片限制为5张，以逗号分割")
     private String albumPics;
 
-    @ApiModelProperty(value = "商品详情标题")
+    @ApiModelProperty(value = "详情标题")
     private String detailTitle;
 
     @ApiModelProperty(value = "促销开始时间")
@@ -123,10 +122,9 @@ public class PmsProduct implements Serializable {
     @ApiModelProperty(value = "商品描述")
     private String description;
 
-    @ApiModelProperty(value = "商品详情描述")
     private String detailDesc;
 
-    @ApiModelProperty(value = "商品详情网页内容")
+    @ApiModelProperty(value = "产品详情网页内容")
     private String detailHtml;
 
     @ApiModelProperty(value = "移动端网页详情")
@@ -158,12 +156,12 @@ public class PmsProduct implements Serializable {
         this.productCategoryId = productCategoryId;
     }
 
-    public Long getFeightTemplateId() {
-        return feightTemplateId;
+    public Long getFreightTemplateId() {
+        return freightTemplateId;
     }
 
-    public void setFeightTemplateId(Long feightTemplateId) {
-        this.feightTemplateId = feightTemplateId;
+    public void setFreightTemplateId(Long freightTemplateId) {
+        this.freightTemplateId = freightTemplateId;
     }
 
     public Long getProductAttributeCategoryId() {
@@ -222,12 +220,12 @@ public class PmsProduct implements Serializable {
         this.newStatus = newStatus;
     }
 
-    public Integer getRecommandStatus() {
-        return recommandStatus;
+    public Integer getRecommendStatus() {
+        return recommendStatus;
     }
 
-    public void setRecommandStatus(Integer recommandStatus) {
-        this.recommandStatus = recommandStatus;
+    public void setRecommendStatus(Integer recommendStatus) {
+        this.recommendStatus = recommendStatus;
     }
 
     public Integer getVerifyStatus() {
@@ -479,7 +477,7 @@ public class PmsProduct implements Serializable {
         sb.append(", id=").append(id);
         sb.append(", brandId=").append(brandId);
         sb.append(", productCategoryId=").append(productCategoryId);
-        sb.append(", feightTemplateId=").append(feightTemplateId);
+        sb.append(", freightTemplateId=").append(freightTemplateId);
         sb.append(", productAttributeCategoryId=").append(productAttributeCategoryId);
         sb.append(", name=").append(name);
         sb.append(", pic=").append(pic);
@@ -487,7 +485,7 @@ public class PmsProduct implements Serializable {
         sb.append(", deleteStatus=").append(deleteStatus);
         sb.append(", publishStatus=").append(publishStatus);
         sb.append(", newStatus=").append(newStatus);
-        sb.append(", recommandStatus=").append(recommandStatus);
+        sb.append(", recommendStatus=").append(recommendStatus);
         sb.append(", verifyStatus=").append(verifyStatus);
         sb.append(", sort=").append(sort);
         sb.append(", sale=").append(sale);
