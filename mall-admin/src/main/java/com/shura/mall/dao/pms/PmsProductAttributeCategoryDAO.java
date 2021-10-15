@@ -8,4 +8,6 @@ import java.util.List;
  * @Description: 商品属性分类自定义 DAO
  */
 public interface PmsProductAttributeCategoryDAO {
+
+    List<PmsProductAttributeCategoryItem> getListWithAttr();
 }
