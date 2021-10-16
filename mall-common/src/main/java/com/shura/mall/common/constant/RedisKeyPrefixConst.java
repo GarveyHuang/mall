@@ -16,4 +16,9 @@ public interface RedisKeyPrefixConst {
      * 商品库存缓存
      */
     String MIAOSHA_STOCK_CACHE = "miaosha:stock:cache:";
+
+    /**
+     * Redis 布隆过滤器 key
+     */
+    String PRODUCT_REDIS_BLOOM_FILTER = "product:redis:bloom:filter";
 }
