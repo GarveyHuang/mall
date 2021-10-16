@@ -12,7 +12,10 @@ public enum ResultCode implements IErrorCode {
     VALIDATE_FAILED(401, "参数校验失败"),
     UNAUTHORIZED(402, "暂未登录或 token 已经过期"),
     FORBIDDEN(403, "没有相关权限"),
-    AUTHORIZATION_HEADER_IS_EMPTY(600, "请求头中的 token 为空");
+    AUTHORIZATION_HEADER_IS_EMPTY(600, "请求头中的 token 为空"),
+    GET_TOKEN_KEY_ERROR(601, "获取 token_key 异常"),
+    GEN_PUBLIC_KEY_ERROR(602, "生成公钥异常"),
+    JWT_TOKEN_VALIDATE_ERROR(603, "token 校验异常");
 
     private long code;
     private String message;
