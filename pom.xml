@@ -25,6 +25,9 @@
         <module>mall-common</module>
         <module>mall-security</module>
         <module>mall-member</module>
+        <module>mall-gateway</module>
+        <module>mall-order</module>
+        <module>mall-product</module>
     </modules>
 
     <properties>
