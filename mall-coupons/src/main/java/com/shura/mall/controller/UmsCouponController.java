@@ -1,6 +1,6 @@
 package com.shura.mall.controller;
 
-import com.shura.mall.clientapi.OmsCartItemClientApi;
+import com.shura.mall.feignapi.OmsCartItemFeignApi;
 import com.shura.mall.common.api.CommonResult;
 import com.shura.mall.domain.CartPromotionItem;
 import com.shura.mall.domain.SmsCouponHistoryDetail;
@@ -28,7 +28,7 @@ public class UmsCouponController {
     private IUmsCouponService couponService;
 
     @Autowired
-    private OmsCartItemClientApi omsCartItemClientApi;
+    private OmsCartItemFeignApi omsCartItemClientApi;
 
     @ApiOperation("领取指定优惠券")
     @PostMapping(value = "/add/{couponId}")

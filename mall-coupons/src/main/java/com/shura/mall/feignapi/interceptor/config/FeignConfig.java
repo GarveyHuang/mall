@@ -1,6 +1,6 @@
-package com.shura.mall.clientapi.interceptor.config;
+package com.shura.mall.feignapi.interceptor.config;
 
-import com.shura.mall.clientapi.interceptor.HeaderInterceptor;
+import com.shura.mall.feignapi.interceptor.HeaderInterceptor;
 import feign.Logger;
 import feign.RequestInterceptor;
 import org.springframework.context.annotation.Bean;

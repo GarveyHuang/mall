@@ -1,4 +1,4 @@
-package com.shura.mall.clientapi.interceptor;
+package com.shura.mall.feignapi.interceptor;
 
 import feign.RequestInterceptor;
 import feign.RequestTemplate;

@@ -1,6 +1,6 @@
-package com.shura.mall.clientapi;
+package com.shura.mall.feignapi;
 
-import com.shura.mall.clientapi.interceptor.config.FeignConfig;
+import com.shura.mall.feignapi.interceptor.config.FeignConfig;
 import com.shura.mall.common.api.CommonResult;
 import com.shura.mall.domain.CartPromotionItem;
 import org.springframework.cloud.openfeign.FeignClient;
@@ -15,7 +15,7 @@ import java.util.List;
  * @Description: 远程调用订单中心购物车详情客户端
  */
 @FeignClient(name = "mall-order", configuration = FeignConfig.class)
-public interface OmsCartItemClientApi {
+public interface OmsCartItemFeignApi {
 
     @GetMapping(value = "/cart/list/promotion")
     @ResponseBody
