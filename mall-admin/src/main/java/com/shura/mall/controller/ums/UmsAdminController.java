@@ -15,6 +15,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
@@ -42,7 +43,7 @@ public class UmsAdminController {
 
     @ApiOperation(value = "用户注册")
     @PostMapping(value = "/register")
-    public CommonResult<UmsAdmin> register(@RequestBody UmsAdminRegisterParam umsAdminRegisterParam) {
+    public CommonResult<UmsAdmin> register(@RequestBody @Validated UmsAdminRegisterParam umsAdminRegisterParam) {
         UmsAdmin admin = adminService.register(umsAdminRegisterParam);
         return CommonResult.success(admin);
     }

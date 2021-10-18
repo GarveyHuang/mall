@@ -5,6 +5,7 @@ import com.github.pagehelper.PageHelper;
 import com.shura.mall.bo.AdminUserDetails;
 import com.shura.mall.dao.ums.UmsAdminPermissionRelationDAO;
 import com.shura.mall.dao.ums.UmsAdminRoleRelationDAO;
+import com.shura.mall.dto.converter.UmsAdminConverter;
 import com.shura.mall.dto.ums.UmsAdminRegisterParam;
 import com.shura.mall.mapper.UmsAdminLoginLogMapper;
 import com.shura.mall.mapper.UmsAdminMapper;
@@ -13,6 +14,7 @@ import com.shura.mall.mapper.UmsAdminRoleRelationMapper;
 import com.shura.mall.model.ums.*;
 import com.shura.mall.security.util.JwtTokenUtil;
 import com.shura.mall.service.ums.IUmsAdminService;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeanUtils;
@@ -40,9 +42,9 @@ import java.util.stream.Collectors;
  * @date: 2021/10/11
  * @description: IUmsAdminService 实现类
  */
+@Slf4j
 @Service("adminService")
 public class UmsAdminServiceImpl implements IUmsAdminService {
-    private static final Logger LOGGER = LoggerFactory.getLogger(UmsAdminServiceImpl.class);
 
     @Autowired
     private UmsAdminMapper adminMapper;
@@ -63,10 +65,7 @@ public class UmsAdminServiceImpl implements IUmsAdminService {
 
     @Override
     public UmsAdmin register(UmsAdminRegisterParam umsAdminRegisterParam) {
-        UmsAdmin umsAdmin = new UmsAdmin();
-        BeanUtils.copyProperties(umsAdminRegisterParam, umsAdmin);
-        umsAdmin.setCreateTime(new Date());
-        umsAdmin.setStatus(1);
+        UmsAdmin umsAdmin = UmsAdminConverter.adminRegisterParamToAdminEntity(umsAdminRegisterParam);
 
         // 查询是否有相同用户名的用户
         UmsAdminExample example = new UmsAdminExample();
@@ -96,6 +95,7 @@ public class UmsAdminServiceImpl implements IUmsAdminService {
         SecurityContextHolder.getContext().setAuthentication(authentication);
         token = jwtTokenUtil.generateToken(userDetails);
         addLoginLog(username);
+
         return token;
     }
 
@@ -110,7 +110,7 @@ public class UmsAdminServiceImpl implements IUmsAdminService {
         loginLog.setCreateTime(new Date());
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
         if (Objects.isNull(attributes)) {
-            LOGGER.warn("记录用户登录信息异常：{}", username);
+            log.warn("记录用户登录信息异常：{}", username);
             return;
         }
         HttpServletRequest request = attributes.getRequest();
