@@ -76,7 +76,7 @@ public class JwtTokenUtil {
         }
 
         // 如果 token 已过期，不支持刷新
-        if (!isTokenExpired(token)) {
+        if (isTokenExpired(token)) {
             return null;
         }
 
