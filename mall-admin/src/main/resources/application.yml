@@ -27,7 +27,7 @@ jwt:
   tokenHeader: Authorization # JWT 存储的请求头
   secret: mall-admin-secret # JWT 加解密使用的密钥
   expiration: 604800 # JWT 的过期时间（60 * 60 * 24）
-  tokenHead: Bearer # JWT 负载中拿到开头
+  tokenHead: Bearer- # JWT 负载中拿到开头
 
 secure:
   ignored:
