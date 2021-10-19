@@ -33,13 +33,13 @@ public class UmsRoleServiceImpl implements IUmsRoleService {
         role.setCreateTime(new Date());
         role.setSort(0);
         role.setAdminCount(0);
-        return roleMapper.insert(role);
+        return roleMapper.insertSelective(role);
     }
 
     @Override
     public int update(Long id, UmsRole role) {
         role.setId(id);
-        return roleMapper.updateByPrimaryKey(role);
+        return roleMapper.updateByPrimaryKeySelective(role);
     }
 
     @Override

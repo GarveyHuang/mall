@@ -29,13 +29,14 @@ public class UmsPermissionServiceImpl implements IUmsPermissionService {
         permission.setStatus(1);
         permission.setCreateTime(new Date());
         permission.setSort(0);
-        return permissionMapper.insert(permission);
+        return permissionMapper.insertSelective(permission);
     }
 
     @Override
     public int update(Long id, UmsPermission permission) {
         permission.setId(id);
-        return permissionMapper.updateByPrimaryKey(permission);
+        permission.setUpdateTime(new Date());
+        return permissionMapper.updateByPrimaryKeySelective(permission);
     }
 
     @Override
