@@ -122,7 +122,7 @@ public class UmsAdminServiceImpl implements IUmsAdminService {
         HttpServletRequest request = attributes.getRequest();
         loginLog.setIp(request.getRemoteAddr());
         loginLog.setUserAgent(request.getHeader("User-Agent"));
-        loginLogMapper.insert(loginLog);
+        loginLogMapper.insertSelective(loginLog);
     }
 
     @Override
@@ -175,7 +175,7 @@ public class UmsAdminServiceImpl implements IUmsAdminService {
         umsAdmin.setId(id);
         // 密码已经加密处理，需要单独修改
         umsAdmin.setPassword(null);
-        return adminMapper.updateByPrimaryKey(umsAdmin);
+        return adminMapper.updateByPrimaryKeySelective(umsAdmin);
     }
 
     @Override
@@ -183,7 +183,7 @@ public class UmsAdminServiceImpl implements IUmsAdminService {
         UmsAdmin umsAdmin = new UmsAdmin();
         umsAdmin.setId(id);
         umsAdmin.setStatus(-1);
-        return adminMapper.updateByPrimaryKey(umsAdmin);
+        return adminMapper.updateByPrimaryKeySelective(umsAdmin);
     }
 
     @Override
