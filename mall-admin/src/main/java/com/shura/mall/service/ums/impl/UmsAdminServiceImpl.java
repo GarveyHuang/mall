@@ -86,7 +86,7 @@ public class UmsAdminServiceImpl implements IUmsAdminService {
     public String login(String username, String password) {
         String token = null;
         // TODO 密码需要客户端加密后传递
-        UserDetails userDetails = loadUserByUsername(username);
+        AdminUserDetails userDetails = loadUserByUsername(username);
         if (!passwordEncoder.matches(password, userDetails.getPassword())) {
             throw new BadCredentialsException("密码不正确");
         }
@@ -96,6 +96,11 @@ public class UmsAdminServiceImpl implements IUmsAdminService {
         token = jwtTokenUtil.generateToken(userDetails);
         addLoginLog(username);
 
+        // 更新登录时间
+        UmsAdmin admin = new UmsAdmin();
+        admin.setId(userDetails.getAdminId());
+        admin.setLoginTime(new Date());
+        adminMapper.updateByPrimaryKeySelective(admin);
         return token;
     }
 
@@ -108,6 +113,7 @@ public class UmsAdminServiceImpl implements IUmsAdminService {
         UmsAdminLoginLog loginLog = new UmsAdminLoginLog();
         loginLog.setAdminId(admin.getId());
         loginLog.setCreateTime(new Date());
+        loginLog.setAddress("");
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
         if (Objects.isNull(attributes)) {
             log.warn("记录用户登录信息异常：{}", username);
@@ -115,6 +121,7 @@ public class UmsAdminServiceImpl implements IUmsAdminService {
         }
         HttpServletRequest request = attributes.getRequest();
         loginLog.setIp(request.getRemoteAddr());
+        loginLog.setUserAgent(request.getHeader("User-Agent"));
         loginLogMapper.insert(loginLog);
     }
 
@@ -141,7 +148,7 @@ public class UmsAdminServiceImpl implements IUmsAdminService {
     }
 
     @Override
-    public UserDetails loadUserByUsername(String username) {
+    public AdminUserDetails loadUserByUsername(String username) {
         UmsAdmin admin = getAdminByUsername(username);
         if (admin != null) {
             List<UmsPermission> permissionList = getPermissionList(admin.getId());

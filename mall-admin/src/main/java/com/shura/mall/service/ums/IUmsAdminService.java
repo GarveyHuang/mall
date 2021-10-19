@@ -1,5 +1,6 @@
 package com.shura.mall.service.ums;
 
+import com.shura.mall.bo.AdminUserDetails;
 import com.shura.mall.dto.ums.UmsAdminRegisterParam;
 import com.shura.mall.model.ums.UmsAdmin;
 import com.shura.mall.model.ums.UmsPermission;
@@ -57,7 +58,7 @@ public interface IUmsAdminService {
      * @param username 用户名
      * @return
      */
-    UserDetails loadUserByUsername(String username);
+    AdminUserDetails loadUserByUsername(String username);
 
     /**
      * 根据用户名或昵称分页查询用户信息
