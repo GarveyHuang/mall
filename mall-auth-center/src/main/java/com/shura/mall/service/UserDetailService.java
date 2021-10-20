@@ -1,18 +1,18 @@
 package com.shura.mall.service;
 
 import cn.hutool.core.util.StrUtil;
-import com.mysql.cj.util.StringUtils;
+import com.shura.mall.domain.MemberDetails;
 import com.shura.mall.mapper.UmsMemberMapper;
 import com.shura.mall.model.ums.UmsMember;
 import com.shura.mall.model.ums.UmsMemberExample;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -24,9 +24,8 @@ import java.util.List;
 @Component
 public class UserDetailService implements UserDetailsService {
 
-    @Autowired
+    @Resource
     private UmsMemberMapper memberMapper;
-
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
@@ -36,7 +35,13 @@ public class UserDetailService implements UserDetailsService {
         }
 
         UmsMember umsMember = getByUserName(username);
-        return null;
+        if (null == umsMember) {
+            log.warn("根据用户名没有查询到对应的用户：{}", username);
+        }
+
+        log.info("根据用户名：{}，获取登录用户信息：{}", username, umsMember);
+
+        return new MemberDetails(umsMember);
     }
 
     private UmsMember getByUserName(String username) {

@@ -18,3 +18,16 @@ spring:
         login-password: druid
   application:
     name: mall-auth-center
+
+mybatis:
+  mapper-locations:
+    - classpath:dao/*.xml
+    - classpath:com/**/mapper/*.xml
+
+shura:
+  mall:
+    jwt:
+      keyPairName: jwt.jks
+      keyPairAlias: jwt
+      keyPairSecret: 123456
+      keyPairStoreSecret: 123456
