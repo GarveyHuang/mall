@@ -63,7 +63,7 @@ public class UmsMember implements Serializable {
     private Integer growth;
 
     @ApiModelProperty(value = "剩余抽奖次数")
-    private Integer luckeyCount;
+    private Integer luckyCount;
 
     @ApiModelProperty(value = "历史积分数量")
     private Integer historyIntegration;
@@ -222,12 +222,12 @@ public class UmsMember implements Serializable {
         this.growth = growth;
     }
 
-    public Integer getLuckeyCount() {
-        return luckeyCount;
+    public Integer getLuckyCount() {
+        return luckyCount;
     }
 
-    public void setLuckeyCount(Integer luckeyCount) {
-        this.luckeyCount = luckeyCount;
+    public void setLuckyCount(Integer luckyCount) {
+        this.luckyCount = luckyCount;
     }
 
     public Integer getHistoryIntegration() {
@@ -263,7 +263,7 @@ public class UmsMember implements Serializable {
         sb.append(", sourceType=").append(sourceType);
         sb.append(", integration=").append(integration);
         sb.append(", growth=").append(growth);
-        sb.append(", luckeyCount=").append(luckeyCount);
+        sb.append(", luckyCount=").append(luckyCount);
         sb.append(", historyIntegration=").append(historyIntegration);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");

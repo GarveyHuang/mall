@@ -1,5 +1,6 @@
 package com.shura.mall.model.ums;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.Serializable;
 import java.util.Date;
@@ -28,9 +29,11 @@ public class UmsAdmin implements Serializable {
     private String note;
 
     @ApiModelProperty(value = "创建时间")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date createTime;
 
     @ApiModelProperty(value = "最后登录时间")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date loginTime;
 
     @ApiModelProperty(value = "帐号启用状态：-1 -> 删除；0 -> 禁用；1 -> 启用")

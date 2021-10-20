@@ -37,7 +37,7 @@
         <javaClientGenerator type="XMLMAPPER" targetPackage="com.shura.mall.mapper"
                              targetProject="./mall-mbg/src/main/java"/>
         <!--生成全部表tableName设为%,指定-->
-        <table tableName="ums_admin_permission_relation" enableCountByExample="true" enableUpdateByExample="true"
+        <table tableName="ums_integration_consume_setting" enableCountByExample="true" enableUpdateByExample="true"
                enableDeleteByExample="true" enableSelectByExample="true"
                selectByExampleQueryId="true">
             <!-- generatedKey用于生成生成主键的方法，

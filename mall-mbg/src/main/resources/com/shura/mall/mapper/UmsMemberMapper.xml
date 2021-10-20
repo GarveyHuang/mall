@@ -21,7 +21,7 @@
     <result column="source_type" jdbcType="INTEGER" property="sourceType" />
     <result column="integration" jdbcType="INTEGER" property="integration" />
     <result column="growth" jdbcType="INTEGER" property="growth" />
-    <result column="luckey_count" jdbcType="INTEGER" property="luckeyCount" />
+    <result column="lucky_count" jdbcType="INTEGER" property="luckyCount" />
     <result column="history_integration" jdbcType="INTEGER" property="historyIntegration" />
   </resultMap>
   <sql id="Example_Where_Clause">
@@ -85,7 +85,7 @@
   <sql id="Base_Column_List">
     id, member_level_id, username, password, nickname, phone, phone_encrypt, status, 
     create_time, update_time, icon, gender, birthday, city, job, personalized_signature, 
-    source_type, integration, growth, luckey_count, history_integration
+    source_type, integration, growth, lucky_count, history_integration
   </sql>
   <select id="selectByExample" parameterType="com.shura.mall.model.ums.UmsMemberExample" resultMap="BaseResultMap">
     select
@@ -125,14 +125,14 @@
       icon, gender, birthday, 
       city, job, personalized_signature, 
       source_type, integration, growth, 
-      luckey_count, history_integration)
+      lucky_count, history_integration)
     values (#{memberLevelId,jdbcType=BIGINT}, #{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
       #{nickname,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR}, #{phoneEncrypt,jdbcType=VARCHAR}, 
       #{status,jdbcType=INTEGER}, #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, 
       #{icon,jdbcType=VARCHAR}, #{gender,jdbcType=INTEGER}, #{birthday,jdbcType=DATE}, 
       #{city,jdbcType=VARCHAR}, #{job,jdbcType=VARCHAR}, #{personalizedSignature,jdbcType=VARCHAR}, 
       #{sourceType,jdbcType=INTEGER}, #{integration,jdbcType=INTEGER}, #{growth,jdbcType=INTEGER}, 
-      #{luckeyCount,jdbcType=INTEGER}, #{historyIntegration,jdbcType=INTEGER})
+      #{luckyCount,jdbcType=INTEGER}, #{historyIntegration,jdbcType=INTEGER})
   </insert>
   <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.shura.mall.model.ums.UmsMember" useGeneratedKeys="true">
     insert into ums_member
@@ -191,8 +191,8 @@
       <if test="growth != null">
         growth,
       </if>
-      <if test="luckeyCount != null">
-        luckey_count,
+      <if test="luckyCount != null">
+        lucky_count,
       </if>
       <if test="historyIntegration != null">
         history_integration,
@@ -253,8 +253,8 @@
       <if test="growth != null">
         #{growth,jdbcType=INTEGER},
       </if>
-      <if test="luckeyCount != null">
-        #{luckeyCount,jdbcType=INTEGER},
+      <if test="luckyCount != null">
+        #{luckyCount,jdbcType=INTEGER},
       </if>
       <if test="historyIntegration != null">
         #{historyIntegration,jdbcType=INTEGER},
@@ -327,8 +327,8 @@
       <if test="record.growth != null">
         growth = #{record.growth,jdbcType=INTEGER},
       </if>
-      <if test="record.luckeyCount != null">
-        luckey_count = #{record.luckeyCount,jdbcType=INTEGER},
+      <if test="record.luckyCount != null">
+        lucky_count = #{record.luckyCount,jdbcType=INTEGER},
       </if>
       <if test="record.historyIntegration != null">
         history_integration = #{record.historyIntegration,jdbcType=INTEGER},
@@ -359,7 +359,7 @@
       source_type = #{record.sourceType,jdbcType=INTEGER},
       integration = #{record.integration,jdbcType=INTEGER},
       growth = #{record.growth,jdbcType=INTEGER},
-      luckey_count = #{record.luckeyCount,jdbcType=INTEGER},
+      lucky_count = #{record.luckyCount,jdbcType=INTEGER},
       history_integration = #{record.historyIntegration,jdbcType=INTEGER}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
@@ -422,8 +422,8 @@
       <if test="growth != null">
         growth = #{growth,jdbcType=INTEGER},
       </if>
-      <if test="luckeyCount != null">
-        luckey_count = #{luckeyCount,jdbcType=INTEGER},
+      <if test="luckyCount != null">
+        lucky_count = #{luckyCount,jdbcType=INTEGER},
       </if>
       <if test="historyIntegration != null">
         history_integration = #{historyIntegration,jdbcType=INTEGER},
@@ -451,7 +451,7 @@
       source_type = #{sourceType,jdbcType=INTEGER},
       integration = #{integration,jdbcType=INTEGER},
       growth = #{growth,jdbcType=INTEGER},
-      luckey_count = #{luckeyCount,jdbcType=INTEGER},
+      lucky_count = #{luckyCount,jdbcType=INTEGER},
       history_integration = #{historyIntegration,jdbcType=INTEGER}
     where id = #{id,jdbcType=BIGINT}
   </update>
