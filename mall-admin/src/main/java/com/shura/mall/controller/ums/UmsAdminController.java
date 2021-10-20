@@ -135,8 +135,8 @@ public class UmsAdminController {
     }
 
     @ApiOperation(value = "给指定用户分配角色")
-    @PostMapping(value = "/role/update")
-    public CommonResult updateRole(@RequestParam("adminId") Long adminId, @RequestParam("roleIds") List<Long> roleIds) {
+    @PostMapping(value = "/role/update/{adminId}")
+    public CommonResult updateRole(@PathVariable Long adminId, @RequestParam("roleIds") List<Long> roleIds) {
         int count = adminService.updateRole(adminId, roleIds);
         if (count > 0) {
             return CommonResult.success(count);
@@ -153,8 +153,8 @@ public class UmsAdminController {
     }
 
     @ApiOperation(value = "给指定用户分配 +- 角色")
-    @PostMapping(value = "/permission/update")
-    public CommonResult updatePermission(@RequestParam("adminId") Long adminId,
+    @PostMapping(value = "/permission/update/{adminId}")
+    public CommonResult updatePermission(@PathVariable Long adminId,
                                          @RequestParam("permissionIds") List<Long> permissionIds) {
         int count = adminService.updatePermission(adminId, permissionIds);
         if (count > 0) {
