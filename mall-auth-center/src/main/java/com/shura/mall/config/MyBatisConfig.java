@@ -1,14 +1,14 @@
 package com.shura.mall.config;
 
-import org.springframework.context.annotation.ComponentScan;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Configuration;
 
 /**
  * @Author: Garvey
  * @Created: 2021/10/20
- * @Description:
+ * @Description: MyBatis 配置
  */
 @Configuration
-@ComponentScan({"com.shura.mall.mapper", "com.shura.mall.portal.dao"})
+@MapperScan({"com.shura.mall.mapper"})
 public class MyBatisConfig {
 }
