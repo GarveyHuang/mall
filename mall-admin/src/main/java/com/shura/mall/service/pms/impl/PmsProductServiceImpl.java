@@ -182,28 +182,30 @@ public class PmsProductServiceImpl implements IPmsProductService {
         PmsProductExample.Criteria criteria = productExample.createCriteria();
         criteria.andDeleteStatusEqualTo(0);
 
-        if (Objects.nonNull(productQueryParam.getPublishStatus())) {
-            criteria.andPublishStatusEqualTo(productQueryParam.getPublishStatus());
-        }
+        if (productQueryParam != null) {
+            if (productQueryParam.getPublishStatus() != null) {
+                criteria.andPublishStatusEqualTo(productQueryParam.getPublishStatus());
+            }
 
-        if (Objects.nonNull(productQueryParam.getVerifyStatus())) {
-            criteria.andVerifyStatusEqualTo(productQueryParam.getVerifyStatus());
-        }
+            if (productQueryParam.getVerifyStatus() != null) {
+                criteria.andVerifyStatusEqualTo(productQueryParam.getVerifyStatus());
+            }
 
-        if (StringUtils.isNotBlank(productQueryParam.getKeyword())) {
-            criteria.andNameLike(productQueryParam.getKeyword() + "%");
-        }
+            if (StringUtils.isNotBlank(productQueryParam.getKeyword())) {
+                criteria.andNameLike(productQueryParam.getKeyword() + "%");
+            }
 
-        if (StringUtils.isNotBlank(productQueryParam.getProductSn())) {
-            criteria.andProductSnEqualTo(productQueryParam.getProductSn());
-        }
+            if (StringUtils.isNotBlank(productQueryParam.getProductSn())) {
+                criteria.andProductSnEqualTo(productQueryParam.getProductSn());
+            }
 
-        if (Objects.nonNull(productQueryParam.getBrandId())) {
-            criteria.andBrandIdEqualTo(productQueryParam.getBrandId());
-        }
+            if (productQueryParam.getBrandId() != null) {
+                criteria.andBrandIdEqualTo(productQueryParam.getBrandId());
+            }
 
-        if (Objects.nonNull(productQueryParam.getProductCategoryId())) {
-            criteria.andProductCategoryIdEqualTo(productQueryParam.getProductCategoryId());
+            if (productQueryParam.getProductCategoryId() != null) {
+                criteria.andProductCategoryIdEqualTo(productQueryParam.getProductCategoryId());
+            }
         }
 
         return productMapper.selectByExample(productExample);

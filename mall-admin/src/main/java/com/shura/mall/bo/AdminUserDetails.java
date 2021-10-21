@@ -2,10 +2,12 @@ package com.shura.mall.bo;
 
 import com.shura.mall.model.ums.UmsAdmin;
 import com.shura.mall.model.ums.UmsPermission;
+import org.apache.commons.lang.StringUtils;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -30,7 +32,7 @@ public class AdminUserDetails implements UserDetails {
     public Collection<? extends GrantedAuthority> getAuthorities() {
         // 返回当前用户的权限
         return permissionList.stream()
-                .filter(permission -> permission.getValue() != null)
+                .filter(permission -> StringUtils.isNotBlank(permission.getValue()))
                 .map(permission -> new SimpleGrantedAuthority(permission.getValue()))
                 .collect(Collectors.toList());
     }

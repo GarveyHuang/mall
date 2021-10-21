@@ -64,7 +64,7 @@ public class PmsProductController {
     @ApiOperation("查询商品")
     @GetMapping(value = "/list")
     @PreAuthorize("hasAuthority('pms:product:read')")
-    public CommonResult<CommonPage<PmsProduct>> getList(@RequestBody PmsProductQueryParam productQueryParam,
+    public CommonResult<CommonPage<PmsProduct>> getList(@RequestBody(required = false) PmsProductQueryParam productQueryParam,
                                                         @RequestParam(value = "pageSize", defaultValue = "5") Integer pageSize,
                                                         @RequestParam(value = "pageNum", defaultValue = "1") Integer pageNum) {
         List<PmsProduct> productList = productService.list(productQueryParam, pageSize, pageNum);
