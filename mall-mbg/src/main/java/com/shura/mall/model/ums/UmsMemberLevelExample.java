@@ -2,7 +2,6 @@ package com.shura.mall.model.ums;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class UmsMemberLevelExample {
@@ -476,363 +475,363 @@ public class UmsMemberLevelExample {
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeFreeFreightIsNull() {
-            addCriterion("priviledge_free_freight is null");
+        public Criteria andPrivilegeFreeFreightIsNull() {
+            addCriterion("privilege_free_freight is null");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeFreeFreightIsNotNull() {
-            addCriterion("priviledge_free_freight is not null");
+        public Criteria andPrivilegeFreeFreightIsNotNull() {
+            addCriterion("privilege_free_freight is not null");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeFreeFreightEqualTo(Integer value) {
-            addCriterion("priviledge_free_freight =", value, "priviledgeFreeFreight");
+        public Criteria andPrivilegeFreeFreightEqualTo(Integer value) {
+            addCriterion("privilege_free_freight =", value, "privilegeFreeFreight");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeFreeFreightNotEqualTo(Integer value) {
-            addCriterion("priviledge_free_freight <>", value, "priviledgeFreeFreight");
+        public Criteria andPrivilegeFreeFreightNotEqualTo(Integer value) {
+            addCriterion("privilege_free_freight <>", value, "privilegeFreeFreight");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeFreeFreightGreaterThan(Integer value) {
-            addCriterion("priviledge_free_freight >", value, "priviledgeFreeFreight");
+        public Criteria andPrivilegeFreeFreightGreaterThan(Integer value) {
+            addCriterion("privilege_free_freight >", value, "privilegeFreeFreight");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeFreeFreightGreaterThanOrEqualTo(Integer value) {
-            addCriterion("priviledge_free_freight >=", value, "priviledgeFreeFreight");
+        public Criteria andPrivilegeFreeFreightGreaterThanOrEqualTo(Integer value) {
+            addCriterion("privilege_free_freight >=", value, "privilegeFreeFreight");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeFreeFreightLessThan(Integer value) {
-            addCriterion("priviledge_free_freight <", value, "priviledgeFreeFreight");
+        public Criteria andPrivilegeFreeFreightLessThan(Integer value) {
+            addCriterion("privilege_free_freight <", value, "privilegeFreeFreight");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeFreeFreightLessThanOrEqualTo(Integer value) {
-            addCriterion("priviledge_free_freight <=", value, "priviledgeFreeFreight");
+        public Criteria andPrivilegeFreeFreightLessThanOrEqualTo(Integer value) {
+            addCriterion("privilege_free_freight <=", value, "privilegeFreeFreight");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeFreeFreightIn(List<Integer> values) {
-            addCriterion("priviledge_free_freight in", values, "priviledgeFreeFreight");
+        public Criteria andPrivilegeFreeFreightIn(List<Integer> values) {
+            addCriterion("privilege_free_freight in", values, "privilegeFreeFreight");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeFreeFreightNotIn(List<Integer> values) {
-            addCriterion("priviledge_free_freight not in", values, "priviledgeFreeFreight");
+        public Criteria andPrivilegeFreeFreightNotIn(List<Integer> values) {
+            addCriterion("privilege_free_freight not in", values, "privilegeFreeFreight");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeFreeFreightBetween(Integer value1, Integer value2) {
-            addCriterion("priviledge_free_freight between", value1, value2, "priviledgeFreeFreight");
+        public Criteria andPrivilegeFreeFreightBetween(Integer value1, Integer value2) {
+            addCriterion("privilege_free_freight between", value1, value2, "privilegeFreeFreight");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeFreeFreightNotBetween(Integer value1, Integer value2) {
-            addCriterion("priviledge_free_freight not between", value1, value2, "priviledgeFreeFreight");
+        public Criteria andPrivilegeFreeFreightNotBetween(Integer value1, Integer value2) {
+            addCriterion("privilege_free_freight not between", value1, value2, "privilegeFreeFreight");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeSignInIsNull() {
-            addCriterion("priviledge_sign_in is null");
+        public Criteria andPrivilegeSignInIsNull() {
+            addCriterion("privilege_sign_in is null");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeSignInIsNotNull() {
-            addCriterion("priviledge_sign_in is not null");
+        public Criteria andPrivilegeSignInIsNotNull() {
+            addCriterion("privilege_sign_in is not null");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeSignInEqualTo(Integer value) {
-            addCriterion("priviledge_sign_in =", value, "priviledgeSignIn");
+        public Criteria andPrivilegeSignInEqualTo(Integer value) {
+            addCriterion("privilege_sign_in =", value, "privilegeSignIn");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeSignInNotEqualTo(Integer value) {
-            addCriterion("priviledge_sign_in <>", value, "priviledgeSignIn");
+        public Criteria andPrivilegeSignInNotEqualTo(Integer value) {
+            addCriterion("privilege_sign_in <>", value, "privilegeSignIn");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeSignInGreaterThan(Integer value) {
-            addCriterion("priviledge_sign_in >", value, "priviledgeSignIn");
+        public Criteria andPrivilegeSignInGreaterThan(Integer value) {
+            addCriterion("privilege_sign_in >", value, "privilegeSignIn");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeSignInGreaterThanOrEqualTo(Integer value) {
-            addCriterion("priviledge_sign_in >=", value, "priviledgeSignIn");
+        public Criteria andPrivilegeSignInGreaterThanOrEqualTo(Integer value) {
+            addCriterion("privilege_sign_in >=", value, "privilegeSignIn");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeSignInLessThan(Integer value) {
-            addCriterion("priviledge_sign_in <", value, "priviledgeSignIn");
+        public Criteria andPrivilegeSignInLessThan(Integer value) {
+            addCriterion("privilege_sign_in <", value, "privilegeSignIn");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeSignInLessThanOrEqualTo(Integer value) {
-            addCriterion("priviledge_sign_in <=", value, "priviledgeSignIn");
+        public Criteria andPrivilegeSignInLessThanOrEqualTo(Integer value) {
+            addCriterion("privilege_sign_in <=", value, "privilegeSignIn");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeSignInIn(List<Integer> values) {
-            addCriterion("priviledge_sign_in in", values, "priviledgeSignIn");
+        public Criteria andPrivilegeSignInIn(List<Integer> values) {
+            addCriterion("privilege_sign_in in", values, "privilegeSignIn");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeSignInNotIn(List<Integer> values) {
-            addCriterion("priviledge_sign_in not in", values, "priviledgeSignIn");
+        public Criteria andPrivilegeSignInNotIn(List<Integer> values) {
+            addCriterion("privilege_sign_in not in", values, "privilegeSignIn");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeSignInBetween(Integer value1, Integer value2) {
-            addCriterion("priviledge_sign_in between", value1, value2, "priviledgeSignIn");
+        public Criteria andPrivilegeSignInBetween(Integer value1, Integer value2) {
+            addCriterion("privilege_sign_in between", value1, value2, "privilegeSignIn");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeSignInNotBetween(Integer value1, Integer value2) {
-            addCriterion("priviledge_sign_in not between", value1, value2, "priviledgeSignIn");
+        public Criteria andPrivilegeSignInNotBetween(Integer value1, Integer value2) {
+            addCriterion("privilege_sign_in not between", value1, value2, "privilegeSignIn");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeCommentIsNull() {
-            addCriterion("priviledge_comment is null");
+        public Criteria andPrivilegeCommentIsNull() {
+            addCriterion("privilege_comment is null");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeCommentIsNotNull() {
-            addCriterion("priviledge_comment is not null");
+        public Criteria andPrivilegeCommentIsNotNull() {
+            addCriterion("privilege_comment is not null");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeCommentEqualTo(Integer value) {
-            addCriterion("priviledge_comment =", value, "priviledgeComment");
+        public Criteria andPrivilegeCommentEqualTo(Integer value) {
+            addCriterion("privilege_comment =", value, "privilegeComment");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeCommentNotEqualTo(Integer value) {
-            addCriterion("priviledge_comment <>", value, "priviledgeComment");
+        public Criteria andPrivilegeCommentNotEqualTo(Integer value) {
+            addCriterion("privilege_comment <>", value, "privilegeComment");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeCommentGreaterThan(Integer value) {
-            addCriterion("priviledge_comment >", value, "priviledgeComment");
+        public Criteria andPrivilegeCommentGreaterThan(Integer value) {
+            addCriterion("privilege_comment >", value, "privilegeComment");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeCommentGreaterThanOrEqualTo(Integer value) {
-            addCriterion("priviledge_comment >=", value, "priviledgeComment");
+        public Criteria andPrivilegeCommentGreaterThanOrEqualTo(Integer value) {
+            addCriterion("privilege_comment >=", value, "privilegeComment");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeCommentLessThan(Integer value) {
-            addCriterion("priviledge_comment <", value, "priviledgeComment");
+        public Criteria andPrivilegeCommentLessThan(Integer value) {
+            addCriterion("privilege_comment <", value, "privilegeComment");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeCommentLessThanOrEqualTo(Integer value) {
-            addCriterion("priviledge_comment <=", value, "priviledgeComment");
+        public Criteria andPrivilegeCommentLessThanOrEqualTo(Integer value) {
+            addCriterion("privilege_comment <=", value, "privilegeComment");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeCommentIn(List<Integer> values) {
-            addCriterion("priviledge_comment in", values, "priviledgeComment");
+        public Criteria andPrivilegeCommentIn(List<Integer> values) {
+            addCriterion("privilege_comment in", values, "privilegeComment");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeCommentNotIn(List<Integer> values) {
-            addCriterion("priviledge_comment not in", values, "priviledgeComment");
+        public Criteria andPrivilegeCommentNotIn(List<Integer> values) {
+            addCriterion("privilege_comment not in", values, "privilegeComment");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeCommentBetween(Integer value1, Integer value2) {
-            addCriterion("priviledge_comment between", value1, value2, "priviledgeComment");
+        public Criteria andPrivilegeCommentBetween(Integer value1, Integer value2) {
+            addCriterion("privilege_comment between", value1, value2, "privilegeComment");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeCommentNotBetween(Integer value1, Integer value2) {
-            addCriterion("priviledge_comment not between", value1, value2, "priviledgeComment");
+        public Criteria andPrivilegeCommentNotBetween(Integer value1, Integer value2) {
+            addCriterion("privilege_comment not between", value1, value2, "privilegeComment");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgePromotionIsNull() {
-            addCriterion("priviledge_promotion is null");
+        public Criteria andPrivilegePromotionIsNull() {
+            addCriterion("privilege_promotion is null");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgePromotionIsNotNull() {
-            addCriterion("priviledge_promotion is not null");
+        public Criteria andPrivilegePromotionIsNotNull() {
+            addCriterion("privilege_promotion is not null");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgePromotionEqualTo(Integer value) {
-            addCriterion("priviledge_promotion =", value, "priviledgePromotion");
+        public Criteria andPrivilegePromotionEqualTo(Integer value) {
+            addCriterion("privilege_promotion =", value, "privilegePromotion");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgePromotionNotEqualTo(Integer value) {
-            addCriterion("priviledge_promotion <>", value, "priviledgePromotion");
+        public Criteria andPrivilegePromotionNotEqualTo(Integer value) {
+            addCriterion("privilege_promotion <>", value, "privilegePromotion");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgePromotionGreaterThan(Integer value) {
-            addCriterion("priviledge_promotion >", value, "priviledgePromotion");
+        public Criteria andPrivilegePromotionGreaterThan(Integer value) {
+            addCriterion("privilege_promotion >", value, "privilegePromotion");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgePromotionGreaterThanOrEqualTo(Integer value) {
-            addCriterion("priviledge_promotion >=", value, "priviledgePromotion");
+        public Criteria andPrivilegePromotionGreaterThanOrEqualTo(Integer value) {
+            addCriterion("privilege_promotion >=", value, "privilegePromotion");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgePromotionLessThan(Integer value) {
-            addCriterion("priviledge_promotion <", value, "priviledgePromotion");
+        public Criteria andPrivilegePromotionLessThan(Integer value) {
+            addCriterion("privilege_promotion <", value, "privilegePromotion");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgePromotionLessThanOrEqualTo(Integer value) {
-            addCriterion("priviledge_promotion <=", value, "priviledgePromotion");
+        public Criteria andPrivilegePromotionLessThanOrEqualTo(Integer value) {
+            addCriterion("privilege_promotion <=", value, "privilegePromotion");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgePromotionIn(List<Integer> values) {
-            addCriterion("priviledge_promotion in", values, "priviledgePromotion");
+        public Criteria andPrivilegePromotionIn(List<Integer> values) {
+            addCriterion("privilege_promotion in", values, "privilegePromotion");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgePromotionNotIn(List<Integer> values) {
-            addCriterion("priviledge_promotion not in", values, "priviledgePromotion");
+        public Criteria andPrivilegePromotionNotIn(List<Integer> values) {
+            addCriterion("privilege_promotion not in", values, "privilegePromotion");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgePromotionBetween(Integer value1, Integer value2) {
-            addCriterion("priviledge_promotion between", value1, value2, "priviledgePromotion");
+        public Criteria andPrivilegePromotionBetween(Integer value1, Integer value2) {
+            addCriterion("privilege_promotion between", value1, value2, "privilegePromotion");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgePromotionNotBetween(Integer value1, Integer value2) {
-            addCriterion("priviledge_promotion not between", value1, value2, "priviledgePromotion");
+        public Criteria andPrivilegePromotionNotBetween(Integer value1, Integer value2) {
+            addCriterion("privilege_promotion not between", value1, value2, "privilegePromotion");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeMemberPriceIsNull() {
-            addCriterion("priviledge_member_price is null");
+        public Criteria andPrivilegeMemberPriceIsNull() {
+            addCriterion("privilege_member_price is null");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeMemberPriceIsNotNull() {
-            addCriterion("priviledge_member_price is not null");
+        public Criteria andPrivilegeMemberPriceIsNotNull() {
+            addCriterion("privilege_member_price is not null");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeMemberPriceEqualTo(Integer value) {
-            addCriterion("priviledge_member_price =", value, "priviledgeMemberPrice");
+        public Criteria andPrivilegeMemberPriceEqualTo(Integer value) {
+            addCriterion("privilege_member_price =", value, "privilegeMemberPrice");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeMemberPriceNotEqualTo(Integer value) {
-            addCriterion("priviledge_member_price <>", value, "priviledgeMemberPrice");
+        public Criteria andPrivilegeMemberPriceNotEqualTo(Integer value) {
+            addCriterion("privilege_member_price <>", value, "privilegeMemberPrice");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeMemberPriceGreaterThan(Integer value) {
-            addCriterion("priviledge_member_price >", value, "priviledgeMemberPrice");
+        public Criteria andPrivilegeMemberPriceGreaterThan(Integer value) {
+            addCriterion("privilege_member_price >", value, "privilegeMemberPrice");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeMemberPriceGreaterThanOrEqualTo(Integer value) {
-            addCriterion("priviledge_member_price >=", value, "priviledgeMemberPrice");
+        public Criteria andPrivilegeMemberPriceGreaterThanOrEqualTo(Integer value) {
+            addCriterion("privilege_member_price >=", value, "privilegeMemberPrice");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeMemberPriceLessThan(Integer value) {
-            addCriterion("priviledge_member_price <", value, "priviledgeMemberPrice");
+        public Criteria andPrivilegeMemberPriceLessThan(Integer value) {
+            addCriterion("privilege_member_price <", value, "privilegeMemberPrice");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeMemberPriceLessThanOrEqualTo(Integer value) {
-            addCriterion("priviledge_member_price <=", value, "priviledgeMemberPrice");
+        public Criteria andPrivilegeMemberPriceLessThanOrEqualTo(Integer value) {
+            addCriterion("privilege_member_price <=", value, "privilegeMemberPrice");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeMemberPriceIn(List<Integer> values) {
-            addCriterion("priviledge_member_price in", values, "priviledgeMemberPrice");
+        public Criteria andPrivilegeMemberPriceIn(List<Integer> values) {
+            addCriterion("privilege_member_price in", values, "privilegeMemberPrice");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeMemberPriceNotIn(List<Integer> values) {
-            addCriterion("priviledge_member_price not in", values, "priviledgeMemberPrice");
+        public Criteria andPrivilegeMemberPriceNotIn(List<Integer> values) {
+            addCriterion("privilege_member_price not in", values, "privilegeMemberPrice");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeMemberPriceBetween(Integer value1, Integer value2) {
-            addCriterion("priviledge_member_price between", value1, value2, "priviledgeMemberPrice");
+        public Criteria andPrivilegeMemberPriceBetween(Integer value1, Integer value2) {
+            addCriterion("privilege_member_price between", value1, value2, "privilegeMemberPrice");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeMemberPriceNotBetween(Integer value1, Integer value2) {
-            addCriterion("priviledge_member_price not between", value1, value2, "priviledgeMemberPrice");
+        public Criteria andPrivilegeMemberPriceNotBetween(Integer value1, Integer value2) {
+            addCriterion("privilege_member_price not between", value1, value2, "privilegeMemberPrice");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeBirthdayIsNull() {
-            addCriterion("priviledge_birthday is null");
+        public Criteria andPrivilegeBirthdayIsNull() {
+            addCriterion("privilege_birthday is null");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeBirthdayIsNotNull() {
-            addCriterion("priviledge_birthday is not null");
+        public Criteria andPrivilegeBirthdayIsNotNull() {
+            addCriterion("privilege_birthday is not null");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeBirthdayEqualTo(Integer value) {
-            addCriterion("priviledge_birthday =", value, "priviledgeBirthday");
+        public Criteria andPrivilegeBirthdayEqualTo(Integer value) {
+            addCriterion("privilege_birthday =", value, "privilegeBirthday");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeBirthdayNotEqualTo(Integer value) {
-            addCriterion("priviledge_birthday <>", value, "priviledgeBirthday");
+        public Criteria andPrivilegeBirthdayNotEqualTo(Integer value) {
+            addCriterion("privilege_birthday <>", value, "privilegeBirthday");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeBirthdayGreaterThan(Integer value) {
-            addCriterion("priviledge_birthday >", value, "priviledgeBirthday");
+        public Criteria andPrivilegeBirthdayGreaterThan(Integer value) {
+            addCriterion("privilege_birthday >", value, "privilegeBirthday");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeBirthdayGreaterThanOrEqualTo(Integer value) {
-            addCriterion("priviledge_birthday >=", value, "priviledgeBirthday");
+        public Criteria andPrivilegeBirthdayGreaterThanOrEqualTo(Integer value) {
+            addCriterion("privilege_birthday >=", value, "privilegeBirthday");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeBirthdayLessThan(Integer value) {
-            addCriterion("priviledge_birthday <", value, "priviledgeBirthday");
+        public Criteria andPrivilegeBirthdayLessThan(Integer value) {
+            addCriterion("privilege_birthday <", value, "privilegeBirthday");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeBirthdayLessThanOrEqualTo(Integer value) {
-            addCriterion("priviledge_birthday <=", value, "priviledgeBirthday");
+        public Criteria andPrivilegeBirthdayLessThanOrEqualTo(Integer value) {
+            addCriterion("privilege_birthday <=", value, "privilegeBirthday");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeBirthdayIn(List<Integer> values) {
-            addCriterion("priviledge_birthday in", values, "priviledgeBirthday");
+        public Criteria andPrivilegeBirthdayIn(List<Integer> values) {
+            addCriterion("privilege_birthday in", values, "privilegeBirthday");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeBirthdayNotIn(List<Integer> values) {
-            addCriterion("priviledge_birthday not in", values, "priviledgeBirthday");
+        public Criteria andPrivilegeBirthdayNotIn(List<Integer> values) {
+            addCriterion("privilege_birthday not in", values, "privilegeBirthday");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeBirthdayBetween(Integer value1, Integer value2) {
-            addCriterion("priviledge_birthday between", value1, value2, "priviledgeBirthday");
+        public Criteria andPrivilegeBirthdayBetween(Integer value1, Integer value2) {
+            addCriterion("privilege_birthday between", value1, value2, "privilegeBirthday");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeBirthdayNotBetween(Integer value1, Integer value2) {
-            addCriterion("priviledge_birthday not between", value1, value2, "priviledgeBirthday");
+        public Criteria andPrivilegeBirthdayNotBetween(Integer value1, Integer value2) {
+            addCriterion("privilege_birthday not between", value1, value2, "privilegeBirthday");
             return (Criteria) this;
         }
 
@@ -903,186 +902,6 @@ public class UmsMemberLevelExample {
 
         public Criteria andNoteNotBetween(String value1, String value2) {
             addCriterion("note not between", value1, value2, "note");
-            return (Criteria) this;
-        }
-
-        public Criteria andCreateTimeIsNull() {
-            addCriterion("create_time is null");
-            return (Criteria) this;
-        }
-
-        public Criteria andCreateTimeIsNotNull() {
-            addCriterion("create_time is not null");
-            return (Criteria) this;
-        }
-
-        public Criteria andCreateTimeEqualTo(Date value) {
-            addCriterion("create_time =", value, "createTime");
-            return (Criteria) this;
-        }
-
-        public Criteria andCreateTimeNotEqualTo(Date value) {
-            addCriterion("create_time <>", value, "createTime");
-            return (Criteria) this;
-        }
-
-        public Criteria andCreateTimeGreaterThan(Date value) {
-            addCriterion("create_time >", value, "createTime");
-            return (Criteria) this;
-        }
-
-        public Criteria andCreateTimeGreaterThanOrEqualTo(Date value) {
-            addCriterion("create_time >=", value, "createTime");
-            return (Criteria) this;
-        }
-
-        public Criteria andCreateTimeLessThan(Date value) {
-            addCriterion("create_time <", value, "createTime");
-            return (Criteria) this;
-        }
-
-        public Criteria andCreateTimeLessThanOrEqualTo(Date value) {
-            addCriterion("create_time <=", value, "createTime");
-            return (Criteria) this;
-        }
-
-        public Criteria andCreateTimeIn(List<Date> values) {
-            addCriterion("create_time in", values, "createTime");
-            return (Criteria) this;
-        }
-
-        public Criteria andCreateTimeNotIn(List<Date> values) {
-            addCriterion("create_time not in", values, "createTime");
-            return (Criteria) this;
-        }
-
-        public Criteria andCreateTimeBetween(Date value1, Date value2) {
-            addCriterion("create_time between", value1, value2, "createTime");
-            return (Criteria) this;
-        }
-
-        public Criteria andCreateTimeNotBetween(Date value1, Date value2) {
-            addCriterion("create_time not between", value1, value2, "createTime");
-            return (Criteria) this;
-        }
-
-        public Criteria andUpdateTimeIsNull() {
-            addCriterion("update_time is null");
-            return (Criteria) this;
-        }
-
-        public Criteria andUpdateTimeIsNotNull() {
-            addCriterion("update_time is not null");
-            return (Criteria) this;
-        }
-
-        public Criteria andUpdateTimeEqualTo(Date value) {
-            addCriterion("update_time =", value, "updateTime");
-            return (Criteria) this;
-        }
-
-        public Criteria andUpdateTimeNotEqualTo(Date value) {
-            addCriterion("update_time <>", value, "updateTime");
-            return (Criteria) this;
-        }
-
-        public Criteria andUpdateTimeGreaterThan(Date value) {
-            addCriterion("update_time >", value, "updateTime");
-            return (Criteria) this;
-        }
-
-        public Criteria andUpdateTimeGreaterThanOrEqualTo(Date value) {
-            addCriterion("update_time >=", value, "updateTime");
-            return (Criteria) this;
-        }
-
-        public Criteria andUpdateTimeLessThan(Date value) {
-            addCriterion("update_time <", value, "updateTime");
-            return (Criteria) this;
-        }
-
-        public Criteria andUpdateTimeLessThanOrEqualTo(Date value) {
-            addCriterion("update_time <=", value, "updateTime");
-            return (Criteria) this;
-        }
-
-        public Criteria andUpdateTimeIn(List<Date> values) {
-            addCriterion("update_time in", values, "updateTime");
-            return (Criteria) this;
-        }
-
-        public Criteria andUpdateTimeNotIn(List<Date> values) {
-            addCriterion("update_time not in", values, "updateTime");
-            return (Criteria) this;
-        }
-
-        public Criteria andUpdateTimeBetween(Date value1, Date value2) {
-            addCriterion("update_time between", value1, value2, "updateTime");
-            return (Criteria) this;
-        }
-
-        public Criteria andUpdateTimeNotBetween(Date value1, Date value2) {
-            addCriterion("update_time not between", value1, value2, "updateTime");
-            return (Criteria) this;
-        }
-
-        public Criteria andIsDeletedIsNull() {
-            addCriterion("is_deleted is null");
-            return (Criteria) this;
-        }
-
-        public Criteria andIsDeletedIsNotNull() {
-            addCriterion("is_deleted is not null");
-            return (Criteria) this;
-        }
-
-        public Criteria andIsDeletedEqualTo(Integer value) {
-            addCriterion("is_deleted =", value, "isDeleted");
-            return (Criteria) this;
-        }
-
-        public Criteria andIsDeletedNotEqualTo(Integer value) {
-            addCriterion("is_deleted <>", value, "isDeleted");
-            return (Criteria) this;
-        }
-
-        public Criteria andIsDeletedGreaterThan(Integer value) {
-            addCriterion("is_deleted >", value, "isDeleted");
-            return (Criteria) this;
-        }
-
-        public Criteria andIsDeletedGreaterThanOrEqualTo(Integer value) {
-            addCriterion("is_deleted >=", value, "isDeleted");
-            return (Criteria) this;
-        }
-
-        public Criteria andIsDeletedLessThan(Integer value) {
-            addCriterion("is_deleted <", value, "isDeleted");
-            return (Criteria) this;
-        }
-
-        public Criteria andIsDeletedLessThanOrEqualTo(Integer value) {
-            addCriterion("is_deleted <=", value, "isDeleted");
-            return (Criteria) this;
-        }
-
-        public Criteria andIsDeletedIn(List<Integer> values) {
-            addCriterion("is_deleted in", values, "isDeleted");
-            return (Criteria) this;
-        }
-
-        public Criteria andIsDeletedNotIn(List<Integer> values) {
-            addCriterion("is_deleted not in", values, "isDeleted");
-            return (Criteria) this;
-        }
-
-        public Criteria andIsDeletedBetween(Integer value1, Integer value2) {
-            addCriterion("is_deleted between", value1, value2, "isDeleted");
-            return (Criteria) this;
-        }
-
-        public Criteria andIsDeletedNotBetween(Integer value1, Integer value2) {
-            addCriterion("is_deleted not between", value1, value2, "isDeleted");
             return (Criteria) this;
         }
     }
