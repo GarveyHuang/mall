@@ -46,3 +46,16 @@ secure:
       - /admin/login
       - /admin/register
       - /upload/product/**
+
+aliyun:
+  oss:
+    endpoint: oss-cn-shenzhen.aliyuncs.com # oss 对外服务的访问域名
+    accessKeyId:  # 访问身份验证中使用到的用户标识
+    accessKeySecret:  # 用户用于加密签名字符串和 oss 用来验证签名字符串的密钥
+    bucketName: shura-mall # oss的存储空间
+    policy:
+      expire: 300 # 签名有效期（S）
+    maxSize: 10 # 上传文件大小（M）
+    callback:  # 文件上传成功后的回调地址
+    dir:
+      prefix: shuramall/images/ # 上传文件夹路径前缀
