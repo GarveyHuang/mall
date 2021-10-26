@@ -1,6 +1,6 @@
 package com.shura.mall.dao.sms;
 
-import com.shura.mall.dto.sms.SmsCouponParam;
+import com.shura.mall.domain.sms.SmsCouponParam;
 import org.apache.ibatis.annotations.Param;
 
 /**

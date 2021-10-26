@@ -1,8 +1,8 @@
 package com.shura.mall.dao.oms;
 
-import com.shura.mall.dto.oms.OmsOrderDeliveryParam;
-import com.shura.mall.dto.oms.OmsOrderDetail;
-import com.shura.mall.dto.oms.OmsOrderQueryParam;
+import com.shura.mall.domain.oms.OmsOrderDeliveryParam;
+import com.shura.mall.domain.oms.OmsOrderDetail;
+import com.shura.mall.domain.oms.OmsOrderQueryParam;
 import com.shura.mall.model.oms.OmsOrder;
 import org.apache.ibatis.annotations.Param;
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.shura.mall.dao.pms.PmsProductDAO">
-    <resultMap id="updateInfoMap" type="com.shura.mall.dto.pms.PmsProductResult" extends="com.shura.mall.mapper.PmsProductMapper.ResultMapWithBLOBs">
+    <resultMap id="updateInfoMap" type="com.shura.mall.domain.pms.PmsProductResult" extends="com.shura.mall.mapper.PmsProductMapper.ResultMapWithBLOBs">
         <result column="cateParentId" jdbcType="BIGINT" property="cateParentId" />
         <collection property="productLadderList" columnPrefix="ladder_" resultMap="com.shura.mall.mapper.PmsProductLadderMapper.BaseResultMap" />
         <collection property="productFullReductionList" columnPrefix="full_" resultMap="com.shura.mall.mapper.PmsProductFullReductionMapper.BaseResultMap" />

@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.shura.mall.dao.oms.OmsOrderDAO">
 
-    <resultMap id="orderDetailResultMap" type="com.shura.mall.dto.oms.OmsOrderDetail"
+    <resultMap id="orderDetailResultMap" type="com.shura.mall.domain.oms.OmsOrderDetail"
                extends="com.shura.mall.mapper.OmsOrderMapper.BaseResultMap">
         <collection property="orderItemList" resultMap="com.shura.mall.mapper.OmsOrderItemMapper.BaseResultMap"
                     columnPrefix="item_"/>

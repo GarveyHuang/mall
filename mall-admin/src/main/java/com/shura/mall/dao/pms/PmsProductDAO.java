@@ -1,6 +1,6 @@
 package com.shura.mall.dao.pms;
 
-import com.shura.mall.dto.pms.PmsProductResult;
+import com.shura.mall.domain.pms.PmsProductResult;
 import org.springframework.data.repository.query.Param;
 
 /**

@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.shura.mall.dao.pms.PmsProductAttributeCategoryDAO">
 
-    <resultMap id="getListWithAttrMap" type="com.shura.mall.dto.pms.PmsProductCategoryWithChildrenItem" extends="com.shura.mall.mapper.PmsProductAttributeCategoryMapper.BaseResultMap">
+    <resultMap id="getListWithAttrMap" type="com.shura.mall.domain.pms.PmsProductCategoryWithChildrenItem" extends="com.shura.mall.mapper.PmsProductAttributeCategoryMapper.BaseResultMap">
         <collection property="productAttributeList" columnPrefix="attr_" resultMap="com.shura.mall.mapper.PmsProductAttributeMapper.BaseResultMap">
         </collection>
     </resultMap>

@@ -1,7 +1,7 @@
 package com.shura.mall.dao.oms;
 
-import com.shura.mall.dto.oms.OmsOrderReturnApplyResult;
-import com.shura.mall.dto.oms.OmsReturnApplyQueryParam;
+import com.shura.mall.domain.oms.OmsOrderReturnApplyResult;
+import com.shura.mall.domain.oms.OmsReturnApplyQueryParam;
 import com.shura.mall.model.oms.OmsOrderReturnApply;
 import org.apache.ibatis.annotations.Param;
 

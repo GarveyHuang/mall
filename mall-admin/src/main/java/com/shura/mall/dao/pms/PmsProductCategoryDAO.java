@@ -1,6 +1,6 @@
 package com.shura.mall.dao.pms;
 
-import com.shura.mall.dto.pms.PmsProductCategoryWithChildrenItem;
+import com.shura.mall.domain.pms.PmsProductCategoryWithChildrenItem;
 
 import java.util.List;
 

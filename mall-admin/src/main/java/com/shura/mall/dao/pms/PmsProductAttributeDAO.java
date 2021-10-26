@@ -1,6 +1,6 @@
 package com.shura.mall.dao.pms;
 
-import com.shura.mall.dto.pms.ProductAttrInfo;
+import com.shura.mall.domain.pms.ProductAttrInfo;
 import org.springframework.data.repository.query.Param;
 
 import java.util.List;

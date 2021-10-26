@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.shura.mall.dao.oms.OmsOrderReturnApplyDAO">
 
-    <resultMap id="returnApplyDetailResultMap" type="com.shura.mall.dto.oms.OmsOrderReturnApplyResult" extends="com.shura.mall.mapper.OmsOrderReturnApplyMapper.BaseResultMap">
+    <resultMap id="returnApplyDetailResultMap" type="com.shura.mall.domain.oms.OmsOrderReturnApplyResult" extends="com.shura.mall.mapper.OmsOrderReturnApplyMapper.BaseResultMap">
         <association property="companyAddress" resultMap="com.shura.mall.mapper.OmsCompanyAddressMapper.BaseResultMap" columnPrefix="ca_"/>
     </resultMap>
 

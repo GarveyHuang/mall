@@ -1,6 +1,6 @@
 package com.shura.mall.dao.sms;
 
-import com.shura.mall.dto.sms.SmsFlashPromotionProductResult;
+import com.shura.mall.domain.sms.SmsFlashPromotionProductResult;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
