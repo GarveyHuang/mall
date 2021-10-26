@@ -1,7 +1,7 @@
 package com.shura.mall.service.base;
 
-import com.shura.mall.dto.base.OssCallbackResult;
-import com.shura.mall.dto.base.OssPolicyResult;
+import com.shura.mall.domain.base.OssCallbackResult;
+import com.shura.mall.domain.base.OssPolicyResult;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
  * @Created: 2021/10/21
  * @Description: OSS 文件上传管理 Service
  */
-public interface IOssService {
+public interface OssService {
 
     /**
      * OSS 上传策略生成

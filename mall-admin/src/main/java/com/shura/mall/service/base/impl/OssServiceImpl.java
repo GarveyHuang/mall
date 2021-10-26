@@ -5,10 +5,10 @@ import com.aliyun.oss.OSSClient;
 import com.aliyun.oss.common.utils.BinaryUtil;
 import com.aliyun.oss.model.MatchMode;
 import com.aliyun.oss.model.PolicyConditions;
-import com.shura.mall.dto.base.OssCallbackParam;
-import com.shura.mall.dto.base.OssCallbackResult;
-import com.shura.mall.dto.base.OssPolicyResult;
-import com.shura.mall.service.base.IOssService;
+import com.shura.mall.domain.base.OssCallbackParam;
+import com.shura.mall.domain.base.OssCallbackResult;
+import com.shura.mall.domain.base.OssPolicyResult;
+import com.shura.mall.service.base.OssService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -26,7 +26,7 @@ import java.util.Date;
  */
 @Slf4j
 @Service("ossService")
-public class OssServiceImpl implements IOssService {
+public class OssServiceImpl implements OssService {
 
     @Value("${aliyun.oss.policy.expire}")
     private int ALIYUN_OSS_EXPIRE;
