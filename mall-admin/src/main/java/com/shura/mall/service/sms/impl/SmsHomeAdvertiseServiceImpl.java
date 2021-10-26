@@ -4,7 +4,7 @@ import com.github.pagehelper.PageHelper;
 import com.shura.mall.mapper.SmsHomeAdvertiseMapper;
 import com.shura.mall.model.sms.SmsHomeAdvertise;
 import com.shura.mall.model.sms.SmsHomeAdvertiseExample;
-import com.shura.mall.service.sms.ISmsHomeAdvertiseService;
+import com.shura.mall.service.sms.SmsHomeAdvertiseService;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,7 +20,7 @@ import java.util.List;
  * @Description: 首页广告管理 Service 实现类
  */
 @Service("homeAdvertiseService")
-public class SmsHomeAdvertiseServiceImpl implements ISmsHomeAdvertiseService {
+public class SmsHomeAdvertiseServiceImpl implements SmsHomeAdvertiseService {
     
     @Autowired
     private SmsHomeAdvertiseMapper homeAdvertiseMapper;

@@ -1,7 +1,7 @@
 package com.shura.mall.service.pms;
 
-import com.shura.mall.dto.pms.PmsProductAttributeParam;
-import com.shura.mall.dto.pms.ProductAttrInfo;
+import com.shura.mall.domain.pms.PmsProductAttributeParam;
+import com.shura.mall.domain.pms.ProductAttrInfo;
 import com.shura.mall.model.pms.PmsProductAttribute;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -12,7 +12,7 @@ import java.util.List;
  * @Created: 2021/10/15
  * @Description: 商品属性 Service
  */
-public interface IPmsProductAttributeService {
+public interface PmsProductAttributeService {
 
     /**
      * 根据分类分页获取商品属性

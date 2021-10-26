@@ -2,11 +2,11 @@ package com.shura.mall.service.sms.impl;
 
 import com.github.pagehelper.PageHelper;
 import com.shura.mall.dao.sms.SmsFlashPromotionProductRelationDAO;
-import com.shura.mall.dto.sms.SmsFlashPromotionProductResult;
+import com.shura.mall.domain.sms.SmsFlashPromotionProductResult;
 import com.shura.mall.mapper.SmsFlashPromotionProductRelationMapper;
 import com.shura.mall.model.sms.SmsFlashPromotionProductRelation;
 import com.shura.mall.model.sms.SmsFlashPromotionProductRelationExample;
-import com.shura.mall.service.sms.ISmsFlashPromotionProductRelationService;
+import com.shura.mall.service.sms.SmsFlashPromotionProductRelationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,7 +18,7 @@ import java.util.List;
  * @Description: 限时购商品关联管理 Service 实现类
  */
 @Service("flashPromotionProductRelationService")
-public class SmsFlashPromotionProductRelationServiceImpl implements ISmsFlashPromotionProductRelationService {
+public class SmsFlashPromotionProductRelationServiceImpl implements SmsFlashPromotionProductRelationService {
 
     @Autowired
     private SmsFlashPromotionProductRelationMapper flashPromotionProductRelationMapper;

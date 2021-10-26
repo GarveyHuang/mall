@@ -2,7 +2,7 @@ package com.shura.mall.service.oms.impl;
 
 import com.shura.mall.mapper.OmsOrderSettingMapper;
 import com.shura.mall.model.oms.OmsOrderSetting;
-import com.shura.mall.service.oms.IOmsOrderSettingService;
+import com.shura.mall.service.oms.OmsOrderSettingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
  * @Description: 订单设置 Service 实现类
  */
 @Service("OrderSettingService")
-public class OmsOrderSettingServiceImpl implements IOmsOrderSettingService {
+public class OmsOrderSettingServiceImpl implements OmsOrderSettingService {
 
     @Autowired
     private OmsOrderSettingMapper orderSettingMapper;

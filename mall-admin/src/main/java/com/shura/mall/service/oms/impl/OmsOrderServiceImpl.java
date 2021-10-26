@@ -3,13 +3,13 @@ package com.shura.mall.service.oms.impl;
 import com.github.pagehelper.PageHelper;
 import com.shura.mall.dao.oms.OmsOrderDAO;
 import com.shura.mall.dao.oms.OmsOrderOperateHistoryDAO;
-import com.shura.mall.dto.oms.*;
+import com.shura.mall.domain.oms.*;
 import com.shura.mall.mapper.OmsOrderMapper;
 import com.shura.mall.mapper.OmsOrderOperateHistoryMapper;
 import com.shura.mall.model.oms.OmsOrder;
 import com.shura.mall.model.oms.OmsOrderExample;
 import com.shura.mall.model.oms.OmsOrderOperateHistory;
-import com.shura.mall.service.oms.IOmsOrderService;
+import com.shura.mall.service.oms.OmsOrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,7 +23,7 @@ import java.util.stream.Collectors;
  * @Description: 订单管理 Service 实现类
  */
 @Service("orderService")
-public class OmsOrderServiceImpl implements IOmsOrderService {
+public class OmsOrderServiceImpl implements OmsOrderService {
 
     @Autowired
     private OmsOrderMapper orderMapper;

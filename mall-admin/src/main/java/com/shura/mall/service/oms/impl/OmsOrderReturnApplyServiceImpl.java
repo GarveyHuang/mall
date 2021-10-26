@@ -2,13 +2,13 @@ package com.shura.mall.service.oms.impl;
 
 import com.github.pagehelper.PageHelper;
 import com.shura.mall.dao.oms.OmsOrderReturnApplyDAO;
-import com.shura.mall.dto.oms.OmsOrderReturnApplyResult;
-import com.shura.mall.dto.oms.OmsReturnApplyQueryParam;
-import com.shura.mall.dto.oms.OmsUpdateStatusParam;
+import com.shura.mall.domain.oms.OmsOrderReturnApplyResult;
+import com.shura.mall.domain.oms.OmsReturnApplyQueryParam;
+import com.shura.mall.domain.oms.OmsUpdateStatusParam;
 import com.shura.mall.mapper.OmsOrderReturnApplyMapper;
 import com.shura.mall.model.oms.OmsOrderReturnApply;
 import com.shura.mall.model.oms.OmsOrderReturnApplyExample;
-import com.shura.mall.service.oms.IOmsOrderReturnApplyService;
+import com.shura.mall.service.oms.OmsOrderReturnApplyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,7 +21,7 @@ import java.util.List;
  * @Description: 退货申请管理 Service 实现类
  */
 @Service("orderReturnApplyService")
-public class OmsOrderReturnApplyServiceImpl implements IOmsOrderReturnApplyService {
+public class OmsOrderReturnApplyServiceImpl implements OmsOrderReturnApplyService {
 
     @Autowired
     private OmsOrderReturnApplyMapper orderReturnApplyMapper;

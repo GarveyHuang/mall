@@ -1,14 +1,14 @@
 package com.shura.mall.service.pms.impl;
 
 import com.github.pagehelper.PageHelper;
-import com.shura.mall.dto.pms.PmsBrandParam;
+import com.shura.mall.domain.pms.PmsBrandParam;
 import com.shura.mall.mapper.PmsBrandMapper;
 import com.shura.mall.mapper.PmsProductMapper;
 import com.shura.mall.model.pms.PmsBrand;
 import com.shura.mall.model.pms.PmsBrandExample;
 import com.shura.mall.model.pms.PmsProduct;
 import com.shura.mall.model.pms.PmsProductExample;
-import com.shura.mall.service.pms.IPmsBrandService;
+import com.shura.mall.service.pms.PmsBrandService;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +22,7 @@ import java.util.List;
  * @Description: 商品品牌 Service 实现类
  */
 @Service("brandService")
-public class PmsBrandServiceImpl implements IPmsBrandService {
+public class PmsBrandServiceImpl implements PmsBrandService {
 
     @Autowired
     private PmsBrandMapper brandMapper;

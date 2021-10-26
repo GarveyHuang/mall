@@ -1,11 +1,11 @@
 package com.shura.mall.service.sms.impl;
 
-import com.shura.mall.dto.sms.SmsFlashPromotionSessionDetail;
+import com.shura.mall.domain.sms.SmsFlashPromotionSessionDetail;
 import com.shura.mall.mapper.SmsFlashPromotionSessionMapper;
 import com.shura.mall.model.sms.SmsFlashPromotionSession;
 import com.shura.mall.model.sms.SmsFlashPromotionSessionExample;
-import com.shura.mall.service.sms.ISmsFlashPromotionProductRelationService;
-import com.shura.mall.service.sms.ISmsFlashPromotionSessionService;
+import com.shura.mall.service.sms.SmsFlashPromotionProductRelationService;
+import com.shura.mall.service.sms.SmsFlashPromotionSessionService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,13 +20,13 @@ import java.util.List;
  * @Description: 限时购场次管理 Service 实现类
  */
 @Service("flashPromotionSessionService")
-public class SmsFlashPromotionSessionServiceImpl implements ISmsFlashPromotionSessionService {
+public class SmsFlashPromotionSessionServiceImpl implements SmsFlashPromotionSessionService {
 
     @Autowired
     private SmsFlashPromotionSessionMapper flashPromotionSessionMapper;
 
     @Autowired
-    private ISmsFlashPromotionProductRelationService flashPromotionProductRelationService;
+    private SmsFlashPromotionProductRelationService flashPromotionProductRelationService;
 
     @Override
     public int create(SmsFlashPromotionSession promotionSession) {

@@ -9,7 +9,7 @@ import java.util.List;
  * @Created: 2021/10/15
  * @Description: 收货地址管 Service
  */
-public interface IOmsCompanyAddressService {
+public interface OmsCompanyAddressService {
 
     /**
      * 获取全部收货地址

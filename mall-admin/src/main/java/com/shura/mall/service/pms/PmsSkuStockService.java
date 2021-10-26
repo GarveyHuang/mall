@@ -9,7 +9,7 @@ import java.util.List;
  * @Created: 2021/10/15
  * @Description: sku 商品库存管理 Service
  */
-public interface IPmsSkuStockService {
+public interface PmsSkuStockService {
 
     /**
      * 根据产品id和skuCode模糊搜索

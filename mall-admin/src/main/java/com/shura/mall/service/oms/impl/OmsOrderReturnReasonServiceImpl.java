@@ -4,7 +4,7 @@ import com.github.pagehelper.PageHelper;
 import com.shura.mall.mapper.OmsOrderReturnReasonMapper;
 import com.shura.mall.model.oms.OmsOrderReturnReason;
 import com.shura.mall.model.oms.OmsOrderReturnReasonExample;
-import com.shura.mall.service.oms.IOmsOrderReturnReasonService;
+import com.shura.mall.service.oms.OmsOrderReturnReasonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,7 +17,7 @@ import java.util.List;
  * @Description: 订单退货原因管理 Service 实现类
  */
 @Service("orderReturnReasonService")
-public class OmsOrderReturnReasonServiceImpl implements IOmsOrderReturnReasonService {
+public class OmsOrderReturnReasonServiceImpl implements OmsOrderReturnReasonService {
 
     @Autowired
     private OmsOrderReturnReasonMapper orderReturnReasonMapper;

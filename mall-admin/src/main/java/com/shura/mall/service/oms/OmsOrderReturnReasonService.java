@@ -9,7 +9,7 @@ import java.util.List;
  * @Created: 2021/10/15
  * @Description: 订单退货原因管理 Service
  */
-public interface IOmsOrderReturnReasonService {
+public interface OmsOrderReturnReasonService {
 
     /**
      * 添加订单原因

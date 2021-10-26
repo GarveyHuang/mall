@@ -10,7 +10,7 @@ import java.util.List;
  * @Created: 2021/10/15
  * @Description: 商品属性分类 Service
  */
-public interface IPmsProductAttributeCategoryService {
+public interface PmsProductAttributeCategoryService {
 
     int create(String name);
 

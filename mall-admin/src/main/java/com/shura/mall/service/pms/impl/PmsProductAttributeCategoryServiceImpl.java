@@ -6,7 +6,7 @@ import com.shura.mall.dao.pms.PmsProductAttributeCategoryItem;
 import com.shura.mall.mapper.PmsProductAttributeCategoryMapper;
 import com.shura.mall.model.pms.PmsProductAttributeCategory;
 import com.shura.mall.model.pms.PmsProductAttributeCategoryExample;
-import com.shura.mall.service.pms.IPmsProductAttributeCategoryService;
+import com.shura.mall.service.pms.PmsProductAttributeCategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,7 +18,7 @@ import java.util.List;
  * @Description: 商品属性分类 Service 实现类
  */
 @Service("productAttributeCategoryService")
-public class PmsProductAttributeCategoryServiceImpl implements IPmsProductAttributeCategoryService {
+public class PmsProductAttributeCategoryServiceImpl implements PmsProductAttributeCategoryService {
 
     @Autowired
     private PmsProductAttributeCategoryMapper productAttributeCategoryMapper;

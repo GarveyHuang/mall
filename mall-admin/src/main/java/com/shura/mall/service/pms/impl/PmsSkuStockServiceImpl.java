@@ -4,7 +4,7 @@ import com.shura.mall.dao.pms.PmsSkuStockDAO;
 import com.shura.mall.mapper.PmsSkuStockMapper;
 import com.shura.mall.model.pms.PmsSkuStock;
 import com.shura.mall.model.pms.PmsSkuStockExample;
-import com.shura.mall.service.pms.IPmsSkuStockService;
+import com.shura.mall.service.pms.PmsSkuStockService;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,7 +17,7 @@ import java.util.List;
  * @Description: sku 商品库存 Service 实现类
  */
 @Service("skuStockService")
-public class PmsSkuStockServiceImpl implements IPmsSkuStockService {
+public class PmsSkuStockServiceImpl implements PmsSkuStockService {
 
     @Autowired
     private PmsSkuStockMapper skuStockMapper;

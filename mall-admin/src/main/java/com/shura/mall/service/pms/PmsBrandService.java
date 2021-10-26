@@ -1,6 +1,6 @@
 package com.shura.mall.service.pms;
 
-import com.shura.mall.dto.pms.PmsBrandParam;
+import com.shura.mall.domain.pms.PmsBrandParam;
 import com.shura.mall.model.pms.PmsBrand;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -11,7 +11,7 @@ import java.util.List;
  * @Created: 2021/10/14
  * @Description: 商品品牌 Service
  */
-public interface IPmsBrandService {
+public interface PmsBrandService {
 
     List<PmsBrand> listAllBrand();
 

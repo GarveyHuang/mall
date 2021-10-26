@@ -1,6 +1,6 @@
 package com.shura.mall.service.sms;
 
-import com.shura.mall.dto.sms.SmsFlashPromotionSessionDetail;
+import com.shura.mall.domain.sms.SmsFlashPromotionSessionDetail;
 import com.shura.mall.model.sms.SmsFlashPromotionSession;
 
 import java.util.List;
@@ -10,7 +10,7 @@ import java.util.List;
  * @Created: 2021/10/15
  * @Description: 限时购场次管理 Service
  */
-public interface ISmsFlashPromotionSessionService {
+public interface SmsFlashPromotionSessionService {
 
     /**
      * 添加场次

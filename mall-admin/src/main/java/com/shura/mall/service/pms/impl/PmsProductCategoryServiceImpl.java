@@ -3,13 +3,13 @@ package com.shura.mall.service.pms.impl;
 import com.github.pagehelper.PageHelper;
 import com.shura.mall.dao.pms.PmsProductCategoryAttributeRelationDAO;
 import com.shura.mall.dao.pms.PmsProductCategoryDAO;
-import com.shura.mall.dto.pms.PmsProductCategoryParam;
-import com.shura.mall.dto.pms.PmsProductCategoryWithChildrenItem;
+import com.shura.mall.domain.pms.PmsProductCategoryParam;
+import com.shura.mall.domain.pms.PmsProductCategoryWithChildrenItem;
 import com.shura.mall.mapper.PmsProductCategoryAttributeRelationMapper;
 import com.shura.mall.mapper.PmsProductCategoryMapper;
 import com.shura.mall.mapper.PmsProductMapper;
 import com.shura.mall.model.pms.*;
-import com.shura.mall.service.pms.IPmsProductCategoryService;
+import com.shura.mall.service.pms.PmsProductCategoryService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -24,7 +24,7 @@ import java.util.List;
  * @Description: 商品分类 Service 实现类
  */
 @Service("productCategoryService")
-public class PmsProductCategoryServiceImpl implements IPmsProductCategoryService {
+public class PmsProductCategoryServiceImpl implements PmsProductCategoryService {
 
     @Autowired
     private PmsProductCategoryMapper productCategoryMapper;

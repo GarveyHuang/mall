@@ -1,8 +1,8 @@
 package com.shura.mall.service.oms;
 
-import com.shura.mall.dto.oms.OmsOrderReturnApplyResult;
-import com.shura.mall.dto.oms.OmsReturnApplyQueryParam;
-import com.shura.mall.dto.oms.OmsUpdateStatusParam;
+import com.shura.mall.domain.oms.OmsOrderReturnApplyResult;
+import com.shura.mall.domain.oms.OmsReturnApplyQueryParam;
+import com.shura.mall.domain.oms.OmsUpdateStatusParam;
 import com.shura.mall.model.oms.OmsOrderReturnApply;
 
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.List;
  * @Created: 2021/10/15
  * @Description: 退货申请管理 Service
  */
-public interface IOmsOrderReturnApplyService {
+public interface OmsOrderReturnApplyService {
 
     /**
      * 分页查询申请

@@ -1,8 +1,8 @@
 package com.shura.mall.service.pms;
 
-import com.shura.mall.dto.pms.PmsProductParam;
-import com.shura.mall.dto.pms.PmsProductQueryParam;
-import com.shura.mall.dto.pms.PmsProductResult;
+import com.shura.mall.domain.pms.PmsProductParam;
+import com.shura.mall.domain.pms.PmsProductQueryParam;
+import com.shura.mall.domain.pms.PmsProductResult;
 import com.shura.mall.model.pms.PmsProduct;
 import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Propagation;
@@ -15,7 +15,7 @@ import java.util.List;
  * @Created: 2021/10/14
  * @Description: 商品管理 Service
  */
-public interface IPmsProductService {
+public interface PmsProductService {
 
     /**
      * 创建商品

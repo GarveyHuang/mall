@@ -1,6 +1,6 @@
 package com.shura.mall.service.ums.impl;
 
-import com.shura.mall.dto.ums.UmsPermissionNode;
+import com.shura.mall.domain.ums.UmsPermissionNode;
 import com.shura.mall.mapper.UmsPermissionMapper;
 import com.shura.mall.model.ums.UmsPermission;
 import com.shura.mall.model.ums.UmsPermissionExample;

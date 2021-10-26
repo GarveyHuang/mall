@@ -1,6 +1,6 @@
 package com.shura.mall.service.sms;
 
-import com.shura.mall.dto.sms.SmsFlashPromotionProductResult;
+import com.shura.mall.domain.sms.SmsFlashPromotionProductResult;
 import com.shura.mall.model.sms.SmsFlashPromotionProductRelation;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -11,7 +11,7 @@ import java.util.List;
  * @Created: 2021/10/15
  * @Description: 限时购商品关联管理 Service
  */
-public interface ISmsFlashPromotionProductRelationService {
+public interface SmsFlashPromotionProductRelationService {
 
     /**
      * 批量添加关联

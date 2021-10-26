@@ -4,7 +4,7 @@ import com.github.pagehelper.PageHelper;
 import com.shura.mall.mapper.SmsHomeBrandMapper;
 import com.shura.mall.model.sms.SmsHomeBrand;
 import com.shura.mall.model.sms.SmsHomeBrandExample;
-import com.shura.mall.service.sms.ISmsHomeBrandService;
+import com.shura.mall.service.sms.SmsHomeBrandService;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,7 +17,7 @@ import java.util.List;
  * @Description: 首页品牌管理 Service 实现类
  */
 @Service("homeBrandService")
-public class SmsHomeBrandServiceImpl implements ISmsHomeBrandService {
+public class SmsHomeBrandServiceImpl implements SmsHomeBrandService {
 
     @Autowired
     private SmsHomeBrandMapper homeBrandMapper;

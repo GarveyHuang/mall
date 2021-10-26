@@ -3,7 +3,7 @@ package com.shura.mall.service.oms.impl;
 import com.shura.mall.mapper.OmsCompanyAddressMapper;
 import com.shura.mall.model.oms.OmsCompanyAddress;
 import com.shura.mall.model.oms.OmsCompanyAddressExample;
-import com.shura.mall.service.oms.IOmsCompanyAddressService;
+import com.shura.mall.service.oms.OmsCompanyAddressService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,7 +15,7 @@ import java.util.List;
  * @Description: 收货地址管 Service 实现类
  */
 @Service("companyAddressService")
-public class OmsCompanyAddressServiceImpl implements IOmsCompanyAddressService {
+public class OmsCompanyAddressServiceImpl implements OmsCompanyAddressService {
 
     @Autowired
     private OmsCompanyAddressMapper companyAddressMapper;

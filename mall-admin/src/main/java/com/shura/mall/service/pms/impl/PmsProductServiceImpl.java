@@ -4,14 +4,14 @@ import com.github.pagehelper.PageHelper;
 import com.shura.mall.dao.cms.CmsPreferenceAreaProductRelationDAO;
 import com.shura.mall.dao.cms.CmsSubjectProductRelationDAO;
 import com.shura.mall.dao.pms.*;
-import com.shura.mall.dto.pms.PmsProductParam;
-import com.shura.mall.dto.pms.PmsProductQueryParam;
-import com.shura.mall.dto.pms.PmsProductResult;
+import com.shura.mall.domain.pms.PmsProductParam;
+import com.shura.mall.domain.pms.PmsProductQueryParam;
+import com.shura.mall.domain.pms.PmsProductResult;
 import com.shura.mall.mapper.*;
 import com.shura.mall.model.cms.CmsPreferenceAreaProductRelationExample;
 import com.shura.mall.model.cms.CmsSubjectProductRelationExample;
 import com.shura.mall.model.pms.*;
-import com.shura.mall.service.pms.IPmsProductService;
+import com.shura.mall.service.pms.PmsProductService;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,7 +24,6 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.Objects;
 
 /**
  * @Author: Garvey
@@ -32,7 +31,7 @@ import java.util.Objects;
  * @Description: 商品管理 Service 实现类
  */
 @Service("productService")
-public class PmsProductServiceImpl implements IPmsProductService {
+public class PmsProductServiceImpl implements PmsProductService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(PmsProductServiceImpl.class);
 

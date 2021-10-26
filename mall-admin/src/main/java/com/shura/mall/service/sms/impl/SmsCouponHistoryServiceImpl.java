@@ -4,7 +4,7 @@ import com.github.pagehelper.PageHelper;
 import com.shura.mall.mapper.SmsCouponHistoryMapper;
 import com.shura.mall.model.sms.SmsCouponHistory;
 import com.shura.mall.model.sms.SmsCouponHistoryExample;
-import com.shura.mall.service.sms.ISmsCouponHistoryService;
+import com.shura.mall.service.sms.SmsCouponHistoryService;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,7 +17,7 @@ import java.util.List;
  * @Description: 优惠券领取记录管理 Service
  */
 @Service("couponHistoryService")
-public class SmsCouponHistoryServiceImpl implements ISmsCouponHistoryService {
+public class SmsCouponHistoryServiceImpl implements SmsCouponHistoryService {
 
     @Autowired
     private SmsCouponHistoryMapper historyMapper;

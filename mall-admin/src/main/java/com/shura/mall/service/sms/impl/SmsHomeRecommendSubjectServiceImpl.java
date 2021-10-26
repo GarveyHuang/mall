@@ -4,7 +4,7 @@ import com.github.pagehelper.PageHelper;
 import com.shura.mall.mapper.SmsHomeRecommendSubjectMapper;
 import com.shura.mall.model.sms.SmsHomeRecommendSubject;
 import com.shura.mall.model.sms.SmsHomeRecommendSubjectExample;
-import com.shura.mall.service.sms.ISmsHomeRecommendSubjectService;
+import com.shura.mall.service.sms.SmsHomeRecommendSubjectService;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,7 +17,7 @@ import java.util.List;
  * @Description: 首页专题推荐管理 Service 实现类
  */
 @Service("homeRecommendSubjectService")
-public class SmsHomeRecommendSubjectServiceImpl implements ISmsHomeRecommendSubjectService {
+public class SmsHomeRecommendSubjectServiceImpl implements SmsHomeRecommendSubjectService {
     
     @Autowired
     private SmsHomeRecommendSubjectMapper homeRecommendSubjectMapper;

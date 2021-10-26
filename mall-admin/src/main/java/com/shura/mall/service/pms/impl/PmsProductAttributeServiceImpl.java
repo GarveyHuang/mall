@@ -2,14 +2,14 @@ package com.shura.mall.service.pms.impl;
 
 import com.github.pagehelper.PageHelper;
 import com.shura.mall.dao.pms.PmsProductAttributeDAO;
-import com.shura.mall.dto.pms.PmsProductAttributeParam;
-import com.shura.mall.dto.pms.ProductAttrInfo;
+import com.shura.mall.domain.pms.PmsProductAttributeParam;
+import com.shura.mall.domain.pms.ProductAttrInfo;
 import com.shura.mall.mapper.PmsProductAttributeCategoryMapper;
 import com.shura.mall.mapper.PmsProductAttributeMapper;
 import com.shura.mall.model.pms.PmsProductAttribute;
 import com.shura.mall.model.pms.PmsProductAttributeCategory;
 import com.shura.mall.model.pms.PmsProductAttributeExample;
-import com.shura.mall.service.pms.IPmsProductAttributeService;
+import com.shura.mall.service.pms.PmsProductAttributeService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,7 +22,7 @@ import java.util.List;
  * @Description: 商品属性 Service 实现类
  */
 @Service("productAttributeService")
-public class PmsProductAttributeServiceImpl implements IPmsProductAttributeService {
+public class PmsProductAttributeServiceImpl implements PmsProductAttributeService {
 
     @Autowired
     private PmsProductAttributeMapper productAttributeMapper;

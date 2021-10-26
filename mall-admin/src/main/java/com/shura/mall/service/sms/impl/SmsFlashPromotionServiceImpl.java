@@ -4,7 +4,7 @@ import com.github.pagehelper.PageHelper;
 import com.shura.mall.mapper.SmsFlashPromotionMapper;
 import com.shura.mall.model.sms.SmsFlashPromotion;
 import com.shura.mall.model.sms.SmsFlashPromotionExample;
-import com.shura.mall.service.sms.ISmsFlashPromotionService;
+import com.shura.mall.service.sms.SmsFlashPromotionService;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,7 +18,7 @@ import java.util.List;
  * @Description: 限时购活动管理 Service 实现类
  */
 @Service("flashPromotionService")
-public class SmsFlashPromotionServiceImpl implements ISmsFlashPromotionService {
+public class SmsFlashPromotionServiceImpl implements SmsFlashPromotionService {
 
     @Autowired
     private SmsFlashPromotionMapper flashPromotionMapper;

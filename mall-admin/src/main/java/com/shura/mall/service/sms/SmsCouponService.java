@@ -1,6 +1,6 @@
 package com.shura.mall.service.sms;
 
-import com.shura.mall.dto.sms.SmsCouponParam;
+import com.shura.mall.domain.sms.SmsCouponParam;
 import com.shura.mall.model.sms.SmsCoupon;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -11,7 +11,7 @@ import java.util.List;
  * @Created: 2021/10/15
  * @Description: 优惠券管理 Service
  */
-public interface ISmsCouponService {
+public interface SmsCouponService {
 
     /**
      * 添加优惠券

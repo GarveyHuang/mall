@@ -1,7 +1,7 @@
 package com.shura.mall.service.pms;
 
-import com.shura.mall.dto.pms.PmsProductCategoryParam;
-import com.shura.mall.dto.pms.PmsProductCategoryWithChildrenItem;
+import com.shura.mall.domain.pms.PmsProductCategoryParam;
+import com.shura.mall.domain.pms.PmsProductCategoryWithChildrenItem;
 import com.shura.mall.model.pms.PmsProductCategory;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -12,7 +12,7 @@ import java.util.List;
  * @Created: 2021/10/15
  * @Description: 商品分类 Service
  */
-public interface IPmsProductCategoryService {
+public interface PmsProductCategoryService {
 
     @Transactional
     int create(PmsProductCategoryParam pmsProductCategoryParam);

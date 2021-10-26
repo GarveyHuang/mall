@@ -9,7 +9,7 @@ import java.util.List;
  * @Created: 2021/10/15
  * @Description: 首页广告管理 Service
  */
-public interface ISmsHomeAdvertiseService {
+public interface SmsHomeAdvertiseService {
 
     /**
      * 添加广告

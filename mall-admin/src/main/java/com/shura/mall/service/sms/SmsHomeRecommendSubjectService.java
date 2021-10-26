@@ -1,6 +1,6 @@
 package com.shura.mall.service.sms;
 
-import com.shura.mall.model.sms.SmsHomeRecommendProduct;
+import com.shura.mall.model.sms.SmsHomeRecommendSubject;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
@@ -8,15 +8,15 @@ import java.util.List;
 /**
  * @Author: Garvey
  * @Created: 2021/10/15
- * @Description: 首页人气推荐管理 Service
+ * @Description: 首页专题推荐管理 Service
  */
-public interface ISmsHomeRecommendProductService {
+public interface SmsHomeRecommendSubjectService {
 
     /**
      * 添加首页推荐
      */
     @Transactional
-    int create(List<SmsHomeRecommendProduct> homeRecommendProductList);
+    int create(List<SmsHomeRecommendSubject> recommendSubjectList);
 
     /**
      * 修改推荐排序
@@ -36,5 +36,5 @@ public interface ISmsHomeRecommendProductService {
     /**
      * 分页查询推荐
      */
-    List<SmsHomeRecommendProduct> list(String productName, Integer recommendStatus, Integer pageSize, Integer pageNum);
+    List<SmsHomeRecommendSubject> list(String subjectName, Integer recommendStatus, Integer pageSize, Integer pageNum);
 }

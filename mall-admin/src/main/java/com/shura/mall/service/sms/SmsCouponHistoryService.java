@@ -9,7 +9,7 @@ import java.util.List;
  * @Created: 2021/10/15
  * @Description: 优惠券领取记录管理 Service
  */
-public interface ISmsCouponHistoryService {
+public interface SmsCouponHistoryService {
 
     /**
      * 分页查询优惠券领取记录

@@ -9,7 +9,7 @@ import java.util.List;
  * @Created: 2021/10/15
  * @Description: 限时购活动管理 Service
  */
-public interface ISmsFlashPromotionService {
+public interface SmsFlashPromotionService {
 
     /**
      * 添加活动

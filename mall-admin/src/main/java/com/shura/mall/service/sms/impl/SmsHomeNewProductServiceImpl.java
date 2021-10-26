@@ -4,7 +4,7 @@ import com.github.pagehelper.PageHelper;
 import com.shura.mall.mapper.SmsHomeNewProductMapper;
 import com.shura.mall.model.sms.SmsHomeNewProduct;
 import com.shura.mall.model.sms.SmsHomeNewProductExample;
-import com.shura.mall.service.sms.ISmsHomeNewProductService;
+import com.shura.mall.service.sms.SmsHomeNewProductService;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,7 +17,7 @@ import java.util.List;
  * @Description: 首页新品管理 Service 实现类
  */
 @Service("homeNewProductService")
-public class SmsHomeNewProductServiceImpl implements ISmsHomeNewProductService {
+public class SmsHomeNewProductServiceImpl implements SmsHomeNewProductService {
 
     @Autowired
     private SmsHomeNewProductMapper homeNewProductMapper;

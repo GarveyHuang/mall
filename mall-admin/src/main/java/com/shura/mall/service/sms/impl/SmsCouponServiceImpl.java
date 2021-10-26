@@ -4,12 +4,12 @@ import com.github.pagehelper.PageHelper;
 import com.shura.mall.dao.sms.SmsCouponDAO;
 import com.shura.mall.dao.sms.SmsCouponProductCategoryRelationDAO;
 import com.shura.mall.dao.sms.SmsCouponProductRelationDAO;
-import com.shura.mall.dto.sms.SmsCouponParam;
+import com.shura.mall.domain.sms.SmsCouponParam;
 import com.shura.mall.mapper.SmsCouponMapper;
 import com.shura.mall.mapper.SmsCouponProductCategoryRelationMapper;
 import com.shura.mall.mapper.SmsCouponProductRelationMapper;
 import com.shura.mall.model.sms.*;
-import com.shura.mall.service.sms.ISmsCouponService;
+import com.shura.mall.service.sms.SmsCouponService;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,7 +22,7 @@ import java.util.List;
  * @Description: 优惠券管理 Service 实现类
  */
 @Service("couponService")
-public class SmsCouponServiceImpl implements ISmsCouponService {
+public class SmsCouponServiceImpl implements SmsCouponService {
 
     @Autowired
     private SmsCouponMapper couponMapper;

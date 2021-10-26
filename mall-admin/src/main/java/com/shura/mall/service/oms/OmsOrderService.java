@@ -1,6 +1,6 @@
 package com.shura.mall.service.oms;
 
-import com.shura.mall.dto.oms.*;
+import com.shura.mall.domain.oms.*;
 import com.shura.mall.model.oms.OmsOrder;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -11,7 +11,7 @@ import java.util.List;
  * @Created: 2021/10/15
  * @Description: 订单管理 Service
  */
-public interface IOmsOrderService {
+public interface OmsOrderService {
 
     /**
      * 订单查询

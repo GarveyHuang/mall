@@ -1,6 +1,6 @@
 package com.shura.mall.service.ums;
 
-import com.shura.mall.dto.ums.UmsPermissionNode;
+import com.shura.mall.domain.ums.UmsPermissionNode;
 import com.shura.mall.model.ums.UmsPermission;
 
 import java.util.List;
