@@ -29,6 +29,10 @@
         <module>mall-order</module>
         <module>mall-product</module>
         <module>mall-coupons</module>
+        <module>mall-auth-center</module>
+        <module>mall-portal</module>
+        <module>mall-search</module>
+        <module>mall-seckill</module>
     </modules>
 
     <properties>
@@ -85,11 +89,6 @@
                 <version>${spring-cloud-alibaba.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
-            </dependency>
-            <dependency>
-                <groupId>com.alibaba.cloud</groupId>
-                <artifactId>spring-cloud-alibaba-nacos-discovery</artifactId>
-                <version>2.1.1.RELEASE</version>
             </dependency>
 
             <!-- mall 通用模块 -->
