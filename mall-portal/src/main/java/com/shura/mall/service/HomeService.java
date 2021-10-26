@@ -12,7 +12,7 @@ import java.util.List;
  * @Created: 2021/10/21
  * @Description: 首页内容管理 Service
  */
-public interface IHomeService {
+public interface HomeService {
 
     /**
      * 获取首页内容

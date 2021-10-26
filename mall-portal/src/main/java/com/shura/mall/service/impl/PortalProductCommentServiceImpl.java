@@ -9,7 +9,7 @@ import com.shura.mall.mapper.PmsCommentReplyMapper;
 import com.shura.mall.model.pms.PmsComment;
 import com.shura.mall.model.pms.PmsCommentReply;
 import com.shura.mall.model.ums.UmsMember;
-import com.shura.mall.service.IPortalProductCommentService;
+import com.shura.mall.service.PortalProductCommentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,7 +21,7 @@ import java.util.Date;
  * @Description: 商品评论管理 Service 实现类
  */
 @Service("portalProductCommentService")
-public class PortalProductCommentServiceImpl implements IPortalProductCommentService {
+public class PortalProductCommentServiceImpl implements PortalProductCommentService {
 
     @Autowired
     private PortalProductCommentDAO productCommentDAO;

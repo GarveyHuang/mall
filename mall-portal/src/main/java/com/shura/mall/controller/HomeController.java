@@ -5,7 +5,7 @@ import com.shura.mall.domain.HomeContentResult;
 import com.shura.mall.model.cms.CmsSubject;
 import com.shura.mall.model.pms.PmsProduct;
 import com.shura.mall.model.pms.PmsProductCategory;
-import com.shura.mall.service.IHomeService;
+import com.shura.mall.service.HomeService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +24,7 @@ import java.util.List;
 public class HomeController {
 
     @Autowired
-    private IHomeService homeService;
+    private HomeService homeService;
 
     @ApiOperation("首页内容页信息展示")
     @GetMapping(value = "/content")

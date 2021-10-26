@@ -10,7 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
  * @Created: 2021/10/21
  * @Description: 商品评论管理 Service
  */
-public interface IPortalProductCommentService {
+public interface PortalProductCommentService {
 
     /**
      * 获取评论列表

@@ -4,7 +4,7 @@ import com.shura.mall.common.api.CommonResult;
 import com.shura.mall.domain.PmsCommentParam;
 import com.shura.mall.model.pms.PmsComment;
 import com.shura.mall.model.pms.PmsCommentReply;
-import com.shura.mall.service.IPortalProductCommentService;
+import com.shura.mall.service.PortalProductCommentService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +23,7 @@ import java.util.List;
 public class PortalProductCommentController {
 
     @Autowired
-    private IPortalProductCommentService portalProductCommentService;
+    private PortalProductCommentService portalProductCommentService;
 
     @ApiOperation("产品评论信息列表")
     @GetMapping(value = "/commentList/{productId}")

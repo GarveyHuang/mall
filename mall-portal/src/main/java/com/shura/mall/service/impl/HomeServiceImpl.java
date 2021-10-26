@@ -16,7 +16,7 @@ import com.shura.mall.model.pms.PmsProductCategoryExample;
 import com.shura.mall.model.pms.PmsProductExample;
 import com.shura.mall.model.sms.SmsHomeAdvertise;
 import com.shura.mall.model.sms.SmsHomeAdvertiseExample;
-import com.shura.mall.service.IHomeService;
+import com.shura.mall.service.HomeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -28,7 +28,7 @@ import java.util.List;
  * @Description: 首页内容管理 Service 实现类
  */
 @Service("homeService")
-public class HomeServiceImpl implements IHomeService {
+public class HomeServiceImpl implements HomeService {
 
     @Autowired
     private SmsHomeAdvertiseMapper advertiseMapper;
