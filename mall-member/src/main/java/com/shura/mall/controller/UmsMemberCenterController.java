@@ -4,8 +4,8 @@ import cn.hutool.core.util.StrUtil;
 import com.shura.mall.common.api.CommonResult;
 import com.shura.mall.domain.PortalMemberInfo;
 import com.shura.mall.model.ums.UmsMember;
-import com.shura.mall.service.IUmsMemberCenterService;
-import com.shura.mall.service.IUmsMemberService;
+import com.shura.mall.service.UmsMemberCenterService;
+import com.shura.mall.service.UmsMemberService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,10 +24,10 @@ import java.util.Map;
 public class UmsMemberCenterController {
 
     @Autowired
-    private IUmsMemberService memberService;
+    private UmsMemberService memberService;
 
     @Autowired
-    private IUmsMemberCenterService memberCenterService;
+    private UmsMemberCenterService memberCenterService;
 
     @ApiOperation(value = "用户中心主页相关信息#功能未实现",
             notes = "关注店铺总数，收藏商品总数，近期7天浏览商品数，优惠券数量")

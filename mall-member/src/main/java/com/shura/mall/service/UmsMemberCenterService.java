@@ -7,7 +7,7 @@ import com.shura.mall.domain.PortalMemberInfo;
  * @Created: 2021/10/15
  * @Description: 会员中心 Service
  */
-public interface IUmsMemberCenterService {
+public interface UmsMemberCenterService {
 
     /**
      * 查询会员信息

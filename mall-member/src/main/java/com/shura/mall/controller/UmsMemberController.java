@@ -3,13 +3,12 @@ package com.shura.mall.controller;
 import cn.hutool.core.util.StrUtil;
 import com.shura.mall.common.api.CommonResult;
 import com.shura.mall.common.api.TokenInfo;
-import com.shura.mall.service.IUmsMemberService;
+import com.shura.mall.service.UmsMemberService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
@@ -34,7 +33,7 @@ public class UmsMemberController {
     private String tokenHead;
 
     @Autowired
-    private IUmsMemberService memberService;
+    private UmsMemberService memberService;
 
     @ApiOperation("会员注册")
     @PostMapping(value = "/register")

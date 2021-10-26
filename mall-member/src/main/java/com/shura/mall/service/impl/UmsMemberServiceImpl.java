@@ -10,9 +10,8 @@ import com.shura.mall.model.ums.UmsMember;
 import com.shura.mall.model.ums.UmsMemberExample;
 import com.shura.mall.model.ums.UmsMemberLevel;
 import com.shura.mall.model.ums.UmsMemberLevelExample;
-import com.shura.mall.service.IRedisService;
-import com.shura.mall.service.IUmsMemberService;
-import jdk.nashorn.internal.parser.Token;
+import com.shura.mall.service.RedisService;
+import com.shura.mall.service.UmsMemberService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,7 +34,7 @@ import java.util.Objects;
  * @Description: 会员管理 Service 的实现
  */
 @Service
-public class UmsMemberServiceImpl implements IUmsMemberService {
+public class UmsMemberServiceImpl implements UmsMemberService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(UmsMemberServiceImpl.class);
 
@@ -53,7 +52,7 @@ public class UmsMemberServiceImpl implements IUmsMemberService {
     @Autowired
     private UmsMemberLevelMapper memberLevelMapper;
     @Autowired
-    private IRedisService redisService;
+    private RedisService redisService;
     @Autowired
     private PasswordEncoder passwordEncoder;
     @Autowired

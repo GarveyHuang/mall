@@ -3,8 +3,8 @@ package com.shura.mall.service.impl;
 import com.shura.mall.mapper.UmsMemberReceiveAddressMapper;
 import com.shura.mall.model.ums.UmsMemberReceiveAddress;
 import com.shura.mall.model.ums.UmsMemberReceiveAddressExample;
-import com.shura.mall.service.IUmsMemberReceiveAddressService;
-import com.shura.mall.service.IUmsMemberService;
+import com.shura.mall.service.UmsMemberReceiveAddressService;
+import com.shura.mall.service.UmsMemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
@@ -17,10 +17,10 @@ import java.util.List;
  * @Description: 用户地址管理 Service 实现类
  */
 @Service("memberReceiveAddressService")
-public class UmsMemberReceiveAddressServiceImpl implements IUmsMemberReceiveAddressService {
+public class UmsMemberReceiveAddressServiceImpl implements UmsMemberReceiveAddressService {
     
     @Autowired
-    private IUmsMemberService memberService;
+    private UmsMemberService memberService;
     
     @Autowired
     private UmsMemberReceiveAddressMapper memberReceiveAddressMapper;

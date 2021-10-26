@@ -10,7 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
  * @Created: 2021/10/13
  * @Description: 会员管理 Service
  */
-public interface IUmsMemberService {
+public interface UmsMemberService {
 
     /**
      * 根据用户名获取会员

@@ -9,7 +9,7 @@ import java.util.List;
  * @Created: 2021/10/15
  * @Description: 用户地址管理 Service
  */
-public interface IUmsMemberReceiveAddressService {
+public interface UmsMemberReceiveAddressService {
 
     /**
      * 添加收货地址

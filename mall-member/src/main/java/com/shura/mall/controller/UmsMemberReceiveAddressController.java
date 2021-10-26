@@ -2,7 +2,7 @@ package com.shura.mall.controller;
 
 import com.shura.mall.common.api.CommonResult;
 import com.shura.mall.model.ums.UmsMemberReceiveAddress;
-import com.shura.mall.service.IUmsMemberReceiveAddressService;
+import com.shura.mall.service.UmsMemberReceiveAddressService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
@@ -23,7 +23,7 @@ import java.util.List;
 public class UmsMemberReceiveAddressController {
 
     @Autowired
-    private IUmsMemberReceiveAddressService memberReceiveAddressService;
+    private UmsMemberReceiveAddressService memberReceiveAddressService;
 
     @ApiOperation("添加收货地址")
     @PostMapping(value = "/add")

@@ -5,7 +5,7 @@ package com.shura.mall.service;
  * @Created: 2021/10/13
  * @Description: Redis 操作 Service
  */
-public interface IRedisService {
+public interface RedisService {
 
     /**
      * 存储数据
