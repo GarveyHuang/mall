@@ -9,7 +9,7 @@ import java.util.List;
  * @Created: 2021/10/13
  * @Description: 优选专区 Service
  */
-public interface ICmsPreferenceAreaService {
+public interface CmsPreferenceAreaService {
 
     List<CmsPreferenceArea> listAll();
 }

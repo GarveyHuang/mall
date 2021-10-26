@@ -4,7 +4,7 @@ import com.github.pagehelper.PageHelper;
 import com.shura.mall.mapper.CmsSubjectMapper;
 import com.shura.mall.model.cms.CmsSubject;
 import com.shura.mall.model.cms.CmsSubjectExample;
-import com.shura.mall.service.cms.ICmsSubjectService;
+import com.shura.mall.service.cms.CmsSubjectService;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,7 +17,7 @@ import java.util.List;
  * @Description: 商品专题 Service 实现类
  */
 @Service("subjectService")
-public class CmsSubjectServiceImpl implements ICmsSubjectService {
+public class CmsSubjectServiceImpl implements CmsSubjectService {
 
     @Autowired
     private CmsSubjectMapper subjectMapper;

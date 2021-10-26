@@ -3,7 +3,7 @@ package com.shura.mall.service.cms.impl;
 import com.shura.mall.mapper.CmsPreferenceAreaMapper;
 import com.shura.mall.model.cms.CmsPreferenceArea;
 import com.shura.mall.model.cms.CmsPreferenceAreaExample;
-import com.shura.mall.service.cms.ICmsPreferenceAreaService;
+import com.shura.mall.service.cms.CmsPreferenceAreaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,7 +15,7 @@ import java.util.List;
  * @Description: 优选专区 Service 实现类
  */
 @Service("preferenceAreaService")
-public class CmsPreferenceAreaServiceImpl implements ICmsPreferenceAreaService {
+public class CmsPreferenceAreaServiceImpl implements CmsPreferenceAreaService {
 
     @Autowired
     private CmsPreferenceAreaMapper preferenceAreaMapper;

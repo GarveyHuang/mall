@@ -9,7 +9,7 @@ import java.util.List;
  * @Created: 2021/10/13
  * @Description: 商品专题 Service
  */
-public interface ICmsSubjectService {
+public interface CmsSubjectService {
 
     /**
      * 查询所有专题
