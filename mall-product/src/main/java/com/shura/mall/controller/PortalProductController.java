@@ -3,7 +3,7 @@ package com.shura.mall.controller;
 import com.shura.mall.common.api.CommonResult;
 import com.shura.mall.dao.PortalProductDAO;
 import com.shura.mall.domain.*;
-import com.shura.mall.service.IPmsProductService;
+import com.shura.mall.service.PmsProductService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
@@ -24,7 +24,7 @@ import java.util.List;
 public class PortalProductController {
 
     @Autowired
-    private IPmsProductService productService;
+    private PmsProductService productService;
 
     @Autowired
     private PortalProductDAO portalProductDAO;

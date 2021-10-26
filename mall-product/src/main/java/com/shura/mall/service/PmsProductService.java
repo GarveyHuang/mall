@@ -9,7 +9,7 @@ import java.util.List;
  * @Created: 2021/10/16
  * @Description: 商品详情信息 Service
  */
-public interface IPmsProductService {
+public interface PmsProductService {
 
     /**
      * 获取商品详情信息

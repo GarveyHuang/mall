@@ -10,7 +10,7 @@ import com.shura.mall.domain.*;
 import com.shura.mall.mapper.SmsFlashPromotionMapper;
 import com.shura.mall.mapper.SmsFlashPromotionSessionMapper;
 import com.shura.mall.model.sms.*;
-import com.shura.mall.service.IPmsProductService;
+import com.shura.mall.service.PmsProductService;
 import com.shura.mall.util.DateUtil;
 import com.shura.mall.util.RedisOpsUtil;
 import lombok.extern.slf4j.Slf4j;
@@ -34,7 +34,7 @@ import java.util.stream.Collectors;
  */
 @Slf4j
 @Service("productService")
-public class PmsProductServiceImpl implements IPmsProductService {
+public class PmsProductServiceImpl implements PmsProductService {
 
     @Autowired
     private PortalProductDAO portalProductDAO;

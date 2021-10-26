@@ -4,7 +4,7 @@ import com.google.common.base.Charsets;
 import com.google.common.hash.Funnel;
 import com.shura.mall.common.constant.RedisKeyPrefixConst;
 import com.shura.mall.component.BloomRedisService;
-import com.shura.mall.service.IPmsProductService;
+import com.shura.mall.service.PmsProductService;
 import com.shura.mall.util.BloomFilterHelper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.InitializingBean;
@@ -26,7 +26,7 @@ import java.util.List;
 public class BloomFilterConfig implements InitializingBean {
 
     @Autowired
-    private IPmsProductService productService;
+    private PmsProductService productService;
 
     @Autowired
     private RedisTemplate redisTemplate;
