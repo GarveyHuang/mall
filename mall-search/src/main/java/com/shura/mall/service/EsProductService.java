@@ -11,7 +11,7 @@ import java.util.List;
  * @Created: 2021/10/21
  * @Description: 商品搜索管理 Service
  */
-public interface IEsProductService {
+public interface EsProductService {
 
     /**
      * 从数据库中导入所有商品到ES

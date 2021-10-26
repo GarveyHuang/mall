@@ -4,7 +4,7 @@ import com.shura.mall.common.api.CommonPage;
 import com.shura.mall.common.api.CommonResult;
 import com.shura.mall.domain.EsProduct;
 import com.shura.mall.domain.EsProductRelatedInfo;
-import com.shura.mall.service.IEsProductService;
+import com.shura.mall.service.EsProductService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
@@ -25,7 +25,7 @@ import java.util.List;
 public class EsProductController {
 
     @Autowired
-    private IEsProductService esProductService;
+    private EsProductService esProductService;
 
     @ApiOperation(value = "导入所有数据库中商品到 ES")
     @GetMapping(value = "/importAll")

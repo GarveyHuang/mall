@@ -4,7 +4,7 @@ import com.shura.mall.dao.EsProductDAO;
 import com.shura.mall.domain.EsProduct;
 import com.shura.mall.domain.EsProductRelatedInfo;
 import com.shura.mall.repository.EsProductRepository;
-import com.shura.mall.service.IEsProductService;
+import com.shura.mall.service.EsProductService;
 import org.apache.commons.lang.StringUtils;
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.common.lucene.search.function.FunctionScoreQuery;
@@ -45,7 +45,7 @@ import java.util.Map;
  */
 
 @Service("esProductService")
-public class EsProductServiceImpl implements IEsProductService {
+public class EsProductServiceImpl implements EsProductService {
 
     @Autowired
     private EsProductDAO esProductDAO;
