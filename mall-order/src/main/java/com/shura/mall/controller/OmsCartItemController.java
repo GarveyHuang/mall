@@ -4,7 +4,7 @@ import com.shura.mall.common.api.CommonResult;
 import com.shura.mall.domain.CartProduct;
 import com.shura.mall.domain.CartPromotionItem;
 import com.shura.mall.model.ums.OmsCartItem;
-import com.shura.mall.service.IOmsCartItemService;
+import com.shura.mall.service.OmsCartItemService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +23,7 @@ import java.util.List;
 public class OmsCartItemController {
 
     @Autowired
-    private IOmsCartItemService cartItemService;
+    private OmsCartItemService cartItemService;
 
     // TODO 这里可以优化，数据不需要都从前端传递
     @ApiOperation(value = "添加商品到购物车")

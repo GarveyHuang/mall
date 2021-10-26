@@ -13,7 +13,7 @@ import java.util.List;
  * @Created: 2021/10/16
  * @Description: 购物车管理 Service
  */
-public interface IOmsCartItemService {
+public interface OmsCartItemService {
 
     /**
      * 查询购物车中是否包含该商品，有增加数量，无添加到购物车

@@ -17,7 +17,7 @@ import java.util.List;
  * @Created: 2021/10/17
  * @Description: 订单管理 Service
  */
-public interface IOmsPortalOrderService {
+public interface OmsPortalOrderService {
 
     /**
      * 根据用户购物车信息生成确认单信息

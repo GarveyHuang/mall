@@ -6,7 +6,7 @@ import com.shura.mall.domain.ConfirmOrderResult;
 import com.shura.mall.domain.MqCancelOrder;
 import com.shura.mall.domain.OmsOrderDetail;
 import com.shura.mall.domain.OrderParam;
-import com.shura.mall.service.IOmsPortalOrderService;
+import com.shura.mall.service.OmsPortalOrderService;
 import com.shura.mall.util.RedisOpsUtil;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
@@ -32,7 +32,7 @@ import java.util.List;
 public class OmsPortalOrderController {
 
     @Autowired
-    private IOmsPortalOrderService portalOrderService;
+    private OmsPortalOrderService portalOrderService;
 
     @Autowired
     private RedisOpsUtil redisOpsUtil;

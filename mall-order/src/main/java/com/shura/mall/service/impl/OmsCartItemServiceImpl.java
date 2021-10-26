@@ -7,8 +7,8 @@ import com.shura.mall.feignapi.pms.PmsProductFeignApi;
 import com.shura.mall.mapper.OmsCartItemMapper;
 import com.shura.mall.model.ums.OmsCartItem;
 import com.shura.mall.model.ums.OmsCartItemExample;
-import com.shura.mall.service.IOmsCartItemService;
-import com.shura.mall.service.IOmsPromotionService;
+import com.shura.mall.service.OmsCartItemService;
+import com.shura.mall.service.OmsPromotionService;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -25,13 +25,13 @@ import java.util.Objects;
  * @Description: 购物车管理 Service 实现类
  */
 @Service("cartItemService")
-public class OmsCartItemServiceImpl implements IOmsCartItemService {
+public class OmsCartItemServiceImpl implements OmsCartItemService {
 
     @Autowired
     private OmsCartItemMapper cartItemMapper;
 
     @Autowired
-    private IOmsPromotionService promotionService;
+    private OmsPromotionService promotionService;
 
     @Autowired
     private PmsProductFeignApi productFeignApi;

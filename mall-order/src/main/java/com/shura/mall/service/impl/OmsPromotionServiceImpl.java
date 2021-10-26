@@ -1,6 +1,6 @@
 package com.shura.mall.service.impl;
 
-import com.shura.mall.service.IOmsPromotionService;
+import com.shura.mall.service.OmsPromotionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
  * @Description: 促销管理 Service 实现类
  */
 @Service("promotionService")
-public class OmsPromotionServiceImpl implements IOmsPromotionService {
+public class OmsPromotionServiceImpl implements OmsPromotionService {
 
     @Autowired
     private PmsPproductFeignApi pmsPproductFeignApi;

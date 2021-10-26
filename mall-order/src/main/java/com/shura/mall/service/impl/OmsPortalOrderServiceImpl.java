@@ -17,8 +17,8 @@ import com.shura.mall.model.sms.*;
 import com.shura.mall.model.ums.UmsIntegrationConsumeSetting;
 import com.shura.mall.model.ums.UmsMember;
 import com.shura.mall.model.ums.UmsMemberReceiveAddress;
-import com.shura.mall.service.IOmsCartItemService;
-import com.shura.mall.service.IOmsPortalOrderService;
+import com.shura.mall.service.OmsCartItemService;
+import com.shura.mall.service.OmsPortalOrderService;
 import com.shura.mall.util.RedisOpsUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,13 +38,13 @@ import java.util.*;
  */
 @Slf4j
 @Service("portalOrderService")
-public class OmsPortalOrderServiceImpl implements IOmsPortalOrderService {
+public class OmsPortalOrderServiceImpl implements OmsPortalOrderService {
 
     @Value("#{redis.key.prefix.orderId}")
     private String REDIS_KEY_PREFIX_ORDER_ID;
 
     @Autowired
-    private IOmsCartItemService cartItemService;
+    private OmsCartItemService cartItemService;
 
     @Autowired
     private UmsMemberFeignApi memberFeignApi;

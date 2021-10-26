@@ -10,7 +10,7 @@ import java.util.List;
  * @Created: 2021/10/16
  * @Description: 促销管理 Service
  */
-public interface IOmsPromotionService {
+public interface OmsPromotionService {
 
     /**
      * 计算购物车中的促销活动信息
