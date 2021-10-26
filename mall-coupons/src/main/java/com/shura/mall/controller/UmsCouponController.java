@@ -5,7 +5,7 @@ import com.shura.mall.common.api.CommonResult;
 import com.shura.mall.domain.CartPromotionItem;
 import com.shura.mall.domain.SmsCouponHistoryDetail;
 import com.shura.mall.model.sms.SmsCouponHistory;
-import com.shura.mall.service.IUmsCouponService;
+import com.shura.mall.service.UmsCouponService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
@@ -25,7 +25,7 @@ import java.util.List;
 public class UmsCouponController {
 
     @Autowired
-    private IUmsCouponService couponService;
+    private UmsCouponService couponService;
 
     @Autowired
     private OmsCartItemFeignApi omsCartItemClientApi;

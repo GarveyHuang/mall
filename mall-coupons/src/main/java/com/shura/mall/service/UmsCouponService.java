@@ -13,7 +13,7 @@ import java.util.List;
  * @Created: 2021/10/17
  * @Description: 用户优惠券管理 Service
  */
-public interface IUmsCouponService {
+public interface UmsCouponService {
     /**
      * 会员添加优惠券
      */

@@ -7,7 +7,7 @@ import com.shura.mall.domain.SmsCouponHistoryDetail;
 import com.shura.mall.mapper.SmsCouponHistoryMapper;
 import com.shura.mall.mapper.SmsCouponMapper;
 import com.shura.mall.model.sms.*;
-import com.shura.mall.service.IUmsCouponService;
+import com.shura.mall.service.UmsCouponService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,7 +23,7 @@ import java.util.Random;
  * @Description: 用户优惠券管理 Service 实现类
  */
 @Service("couponService")
-public class UmsCouponServiceImpl implements IUmsCouponService {
+public class UmsCouponServiceImpl implements UmsCouponService {
 
     @Autowired
     private SmsCouponMapper couponMapper;
