@@ -2,7 +2,7 @@ package com.shura.mall.controller.pms;
 
 import com.shura.mall.common.api.CommonResult;
 import com.shura.mall.model.pms.PmsSkuStock;
-import com.shura.mall.service.pms.IPmsSkuStockService;
+import com.shura.mall.service.pms.PmsSkuStockService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +21,7 @@ import java.util.List;
 public class PmsSkuStockController {
 
     @Autowired
-    private IPmsSkuStockService skuStockService;
+    private PmsSkuStockService skuStockService;
 
     @ApiOperation("根据商品编号及编号模糊搜索sku库存")
     @GetMapping(value = "/{pid}")

@@ -3,7 +3,7 @@ package com.shura.mall.controller.sms;
 import com.shura.mall.common.api.CommonPage;
 import com.shura.mall.common.api.CommonResult;
 import com.shura.mall.model.sms.SmsHomeAdvertise;
-import com.shura.mall.service.sms.ISmsHomeAdvertiseService;
+import com.shura.mall.service.sms.SmsHomeAdvertiseService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +22,7 @@ import java.util.List;
 public class SmsHomeAdvertiseController {
     
     @Autowired
-    private ISmsHomeAdvertiseService homeAdvertiseService;
+    private SmsHomeAdvertiseService homeAdvertiseService;
 
     @ApiOperation("添加广告")
     @PostMapping(value = "/create")

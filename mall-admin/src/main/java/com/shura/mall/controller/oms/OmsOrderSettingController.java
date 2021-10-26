@@ -2,7 +2,7 @@ package com.shura.mall.controller.oms;
 
 import com.shura.mall.common.api.CommonResult;
 import com.shura.mall.model.oms.OmsOrderSetting;
-import com.shura.mall.service.oms.IOmsOrderSettingService;
+import com.shura.mall.service.oms.OmsOrderSettingService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.*;
 public class OmsOrderSettingController {
 
     @Autowired
-    private IOmsOrderSettingService orderSettingService;
+    private OmsOrderSettingService orderSettingService;
 
     @ApiOperation("获取指定订单设置")
     @GetMapping(value = "/{id}")

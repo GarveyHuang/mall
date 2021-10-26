@@ -3,7 +3,7 @@ package com.shura.mall.controller.sms;
 import com.shura.mall.common.api.CommonPage;
 import com.shura.mall.common.api.CommonResult;
 import com.shura.mall.model.sms.SmsCouponHistory;
-import com.shura.mall.service.sms.ISmsCouponHistoryService;
+import com.shura.mall.service.sms.SmsCouponHistoryService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +25,7 @@ import java.util.List;
 public class SmsCouponHistoryController {
 
     @Autowired
-    private ISmsCouponHistoryService historyService;
+    private SmsCouponHistoryService historyService;
 
     @ApiOperation("根据优惠券id，使用状态，订单编号分页获取领取记录")
     @GetMapping(value = "/list")

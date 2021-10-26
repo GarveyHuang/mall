@@ -1,9 +1,9 @@
 package com.shura.mall.controller;
 
 import com.shura.mall.common.api.CommonResult;
-import com.shura.mall.dto.base.OssCallbackResult;
-import com.shura.mall.dto.base.OssPolicyResult;
-import com.shura.mall.service.base.IOssService;
+import com.shura.mall.domain.base.OssCallbackResult;
+import com.shura.mall.domain.base.OssPolicyResult;
+import com.shura.mall.service.base.OssService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
@@ -27,7 +27,7 @@ import javax.servlet.http.HttpServletRequest;
 public class OssController {
 
     @Autowired
-    private IOssService ossService;
+    private OssService ossService;
 
     @ApiOperation(value = "oss 上传签名生成")
     @GetMapping("/policy")

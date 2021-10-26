@@ -2,9 +2,9 @@ package com.shura.mall.controller.oms;
 
 import com.shura.mall.common.api.CommonPage;
 import com.shura.mall.common.api.CommonResult;
-import com.shura.mall.dto.oms.*;
+import com.shura.mall.domain.oms.*;
 import com.shura.mall.model.oms.OmsOrder;
-import com.shura.mall.service.oms.IOmsOrderService;
+import com.shura.mall.service.oms.OmsOrderService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +23,7 @@ import java.util.List;
 public class OmsOrderController {
 
     @Autowired
-    private IOmsOrderService orderService;
+    private OmsOrderService orderService;
 
     @ApiOperation("查询订单")
     @GetMapping(value = "/list")

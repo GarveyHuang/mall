@@ -2,9 +2,9 @@ package com.shura.mall.controller.sms;
 
 import com.shura.mall.common.api.CommonPage;
 import com.shura.mall.common.api.CommonResult;
-import com.shura.mall.dto.sms.SmsCouponParam;
+import com.shura.mall.domain.sms.SmsCouponParam;
 import com.shura.mall.model.sms.SmsCoupon;
-import com.shura.mall.service.sms.ISmsCouponService;
+import com.shura.mall.service.sms.SmsCouponService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +23,7 @@ import java.util.List;
 public class SmsCouponController {
 
     @Autowired
-    private ISmsCouponService couponService;
+    private SmsCouponService couponService;
 
     @ApiOperation("添加优惠券")
     @PostMapping(value = "/create")

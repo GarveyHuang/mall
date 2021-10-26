@@ -3,7 +3,7 @@ package com.shura.mall.controller.cms;
 import com.shura.mall.common.api.CommonPage;
 import com.shura.mall.common.api.CommonResult;
 import com.shura.mall.model.cms.CmsSubject;
-import com.shura.mall.service.cms.ICmsSubjectService;
+import com.shura.mall.service.cms.CmsSubjectService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +22,7 @@ import java.util.List;
 public class CmsSubjectController {
 
     @Autowired
-    private ICmsSubjectService subjectService;
+    private CmsSubjectService subjectService;
 
     @ApiOperation("获取全部商品专题")
     @GetMapping(value = "/listAll")

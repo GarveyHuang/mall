@@ -2,11 +2,11 @@ package com.shura.mall.controller.pms;
 
 import com.shura.mall.common.api.CommonPage;
 import com.shura.mall.common.api.CommonResult;
-import com.shura.mall.dto.pms.PmsProductParam;
-import com.shura.mall.dto.pms.PmsProductQueryParam;
-import com.shura.mall.dto.pms.PmsProductResult;
+import com.shura.mall.domain.pms.PmsProductParam;
+import com.shura.mall.domain.pms.PmsProductQueryParam;
+import com.shura.mall.domain.pms.PmsProductResult;
 import com.shura.mall.model.pms.PmsProduct;
-import com.shura.mall.service.pms.IPmsProductService;
+import com.shura.mall.service.pms.PmsProductService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +27,7 @@ import java.util.List;
 public class PmsProductController {
 
     @Autowired
-    private IPmsProductService productService;
+    private PmsProductService productService;
 
     @ApiOperation("创建商品")
     @PostMapping(value = "/create")

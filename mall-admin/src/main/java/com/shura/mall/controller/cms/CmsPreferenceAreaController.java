@@ -2,7 +2,7 @@ package com.shura.mall.controller.cms;
 
 import com.shura.mall.common.api.CommonResult;
 import com.shura.mall.model.cms.CmsPreferenceArea;
-import com.shura.mall.service.cms.ICmsPreferenceAreaService;
+import com.shura.mall.service.cms.CmsPreferenceAreaService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +23,7 @@ import java.util.List;
 public class CmsPreferenceAreaController {
 
     @Autowired
-    private ICmsPreferenceAreaService preferenceAreaService;
+    private CmsPreferenceAreaService preferenceAreaService;
 
     @ApiOperation("获取所有商品优选")
     @GetMapping(value = "/listAll")

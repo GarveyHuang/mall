@@ -3,7 +3,7 @@ package com.shura.mall.controller.sms;
 import com.shura.mall.common.api.CommonPage;
 import com.shura.mall.common.api.CommonResult;
 import com.shura.mall.model.sms.SmsFlashPromotion;
-import com.shura.mall.service.sms.ISmsFlashPromotionService;
+import com.shura.mall.service.sms.SmsFlashPromotionService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +22,7 @@ import java.util.List;
 public class SmsFlashPromotionController {
 
     @Autowired
-    private ISmsFlashPromotionService flashPromotionService;
+    private SmsFlashPromotionService flashPromotionService;
 
     @ApiOperation("添加活动")
     @PostMapping(value = "/create")

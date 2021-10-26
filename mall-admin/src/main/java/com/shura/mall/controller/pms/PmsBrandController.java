@@ -2,9 +2,9 @@ package com.shura.mall.controller.pms;
 
 import com.shura.mall.common.api.CommonPage;
 import com.shura.mall.common.api.CommonResult;
-import com.shura.mall.dto.pms.PmsBrandParam;
+import com.shura.mall.domain.pms.PmsBrandParam;
 import com.shura.mall.model.pms.PmsBrand;
-import com.shura.mall.service.pms.IPmsBrandService;
+import com.shura.mall.service.pms.PmsBrandService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +25,7 @@ import java.util.List;
 public class PmsBrandController {
 
     @Autowired
-    private IPmsBrandService brandService;
+    private PmsBrandService brandService;
 
     @ApiOperation(value = "获取全部品牌列表")
     @GetMapping(value = "/listAll")

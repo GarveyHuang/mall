@@ -2,11 +2,11 @@ package com.shura.mall.controller.oms;
 
 import com.shura.mall.common.api.CommonPage;
 import com.shura.mall.common.api.CommonResult;
-import com.shura.mall.dto.oms.OmsOrderReturnApplyResult;
-import com.shura.mall.dto.oms.OmsReturnApplyQueryParam;
-import com.shura.mall.dto.oms.OmsUpdateStatusParam;
+import com.shura.mall.domain.oms.OmsOrderReturnApplyResult;
+import com.shura.mall.domain.oms.OmsReturnApplyQueryParam;
+import com.shura.mall.domain.oms.OmsUpdateStatusParam;
 import com.shura.mall.model.oms.OmsOrderReturnApply;
-import com.shura.mall.service.oms.IOmsOrderReturnApplyService;
+import com.shura.mall.service.oms.OmsOrderReturnApplyService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +25,7 @@ import java.util.List;
 public class OmsOrderReturnApplyController {
 
     @Autowired
-    private IOmsOrderReturnApplyService returnApplyService;
+    private OmsOrderReturnApplyService returnApplyService;
 
     @ApiOperation("分页查询退货申请")
     @GetMapping(value = "/list")

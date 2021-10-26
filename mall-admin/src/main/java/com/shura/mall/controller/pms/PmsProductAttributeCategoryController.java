@@ -4,7 +4,7 @@ import com.shura.mall.common.api.CommonPage;
 import com.shura.mall.common.api.CommonResult;
 import com.shura.mall.dao.pms.PmsProductAttributeCategoryItem;
 import com.shura.mall.model.pms.PmsProductAttributeCategory;
-import com.shura.mall.service.pms.IPmsProductAttributeCategoryService;
+import com.shura.mall.service.pms.PmsProductAttributeCategoryService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +23,7 @@ import java.util.List;
 public class PmsProductAttributeCategoryController {
 
     @Autowired
-    private IPmsProductAttributeCategoryService productAttributeCategoryService;
+    private PmsProductAttributeCategoryService productAttributeCategoryService;
 
     @ApiOperation("添加商品属性分类")
     @PostMapping(value = "/create")

@@ -2,7 +2,7 @@ package com.shura.mall.controller.oms;
 
 import com.shura.mall.common.api.CommonResult;
 import com.shura.mall.model.oms.OmsCompanyAddress;
-import com.shura.mall.service.oms.IOmsCompanyAddressService;
+import com.shura.mall.service.oms.OmsCompanyAddressService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +23,7 @@ import java.util.List;
 public class OmsCompanyAddressController {
 
     @Autowired
-    private IOmsCompanyAddressService companyAddressService;
+    private OmsCompanyAddressService companyAddressService;
 
     @ApiOperation("获取所有收货地址")
     @GetMapping(value = "/list")

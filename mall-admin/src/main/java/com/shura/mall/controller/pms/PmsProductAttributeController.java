@@ -2,10 +2,10 @@ package com.shura.mall.controller.pms;
 
 import com.shura.mall.common.api.CommonPage;
 import com.shura.mall.common.api.CommonResult;
-import com.shura.mall.dto.pms.PmsProductAttributeParam;
-import com.shura.mall.dto.pms.ProductAttrInfo;
+import com.shura.mall.domain.pms.PmsProductAttributeParam;
+import com.shura.mall.domain.pms.ProductAttrInfo;
 import com.shura.mall.model.pms.PmsProductAttribute;
-import com.shura.mall.service.pms.IPmsProductAttributeService;
+import com.shura.mall.service.pms.PmsProductAttributeService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
@@ -26,7 +26,7 @@ import java.util.List;
 public class PmsProductAttributeController {
 
     @Autowired
-    private IPmsProductAttributeService productAttributeService;
+    private PmsProductAttributeService productAttributeService;
 
     @ApiOperation("根据分类查询属性列表或参数列表")
     @ApiImplicitParams({@ApiImplicitParam(name = "type", value = "0表示属性，1表示参数", required = true, paramType = "query", dataType = "integer")})

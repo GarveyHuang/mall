@@ -2,10 +2,10 @@ package com.shura.mall.controller.pms;
 
 import com.shura.mall.common.api.CommonPage;
 import com.shura.mall.common.api.CommonResult;
-import com.shura.mall.dto.pms.PmsProductCategoryParam;
-import com.shura.mall.dto.pms.PmsProductCategoryWithChildrenItem;
+import com.shura.mall.domain.pms.PmsProductCategoryParam;
+import com.shura.mall.domain.pms.PmsProductCategoryWithChildrenItem;
 import com.shura.mall.model.pms.PmsProductCategory;
-import com.shura.mall.service.pms.IPmsProductCategoryService;
+import com.shura.mall.service.pms.PmsProductCategoryService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +26,7 @@ import java.util.List;
 public class PmsProductCategoryController {
 
     @Autowired
-    private IPmsProductCategoryService productCategoryService;
+    private PmsProductCategoryService productCategoryService;
 
     @ApiOperation("添加产品分类")
     @PostMapping(value = "/create")

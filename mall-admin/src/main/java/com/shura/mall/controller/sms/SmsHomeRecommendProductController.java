@@ -3,7 +3,7 @@ package com.shura.mall.controller.sms;
 import com.shura.mall.common.api.CommonPage;
 import com.shura.mall.common.api.CommonResult;
 import com.shura.mall.model.sms.SmsHomeRecommendProduct;
-import com.shura.mall.service.sms.ISmsHomeRecommendProductService;
+import com.shura.mall.service.sms.SmsHomeRecommendProductService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +22,7 @@ import java.util.List;
 public class SmsHomeRecommendProductController {
     
     @Autowired
-    private ISmsHomeRecommendProductService homeRecommendProductService;
+    private SmsHomeRecommendProductService homeRecommendProductService;
 
     @ApiOperation("添加首页推荐")
     @PostMapping(value = "/create")

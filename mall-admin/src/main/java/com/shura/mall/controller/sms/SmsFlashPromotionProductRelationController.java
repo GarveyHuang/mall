@@ -2,9 +2,9 @@ package com.shura.mall.controller.sms;
 
 import com.shura.mall.common.api.CommonPage;
 import com.shura.mall.common.api.CommonResult;
-import com.shura.mall.dto.sms.SmsFlashPromotionProductResult;
+import com.shura.mall.domain.sms.SmsFlashPromotionProductResult;
 import com.shura.mall.model.sms.SmsFlashPromotionProductRelation;
-import com.shura.mall.service.sms.ISmsFlashPromotionProductRelationService;
+import com.shura.mall.service.sms.SmsFlashPromotionProductRelationService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +23,7 @@ import java.util.List;
 public class SmsFlashPromotionProductRelationController {
 
     @Autowired
-    private ISmsFlashPromotionProductRelationService flashPromotionProductRelationService;
+    private SmsFlashPromotionProductRelationService flashPromotionProductRelationService;
 
     @ApiOperation("批量选择商品添加关联")
     @PostMapping(value = "/create")

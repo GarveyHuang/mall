@@ -1,9 +1,9 @@
 package com.shura.mall.controller.sms;
 
 import com.shura.mall.common.api.CommonResult;
-import com.shura.mall.dto.sms.SmsFlashPromotionSessionDetail;
+import com.shura.mall.domain.sms.SmsFlashPromotionSessionDetail;
 import com.shura.mall.model.sms.SmsFlashPromotionSession;
-import com.shura.mall.service.sms.ISmsFlashPromotionSessionService;
+import com.shura.mall.service.sms.SmsFlashPromotionSessionService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +22,7 @@ import java.util.List;
 public class SmsFlashPromotionSessionController {
 
     @Autowired
-    private ISmsFlashPromotionSessionService flashPromotionSessionService;
+    private SmsFlashPromotionSessionService flashPromotionSessionService;
 
     @ApiOperation("添加场次")
     @PostMapping(value = "/create")
