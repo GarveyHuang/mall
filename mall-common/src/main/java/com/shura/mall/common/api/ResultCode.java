@@ -5,7 +5,7 @@ package com.shura.mall.common.api;
  * @date: 2021/10/10 9:40 下午
  * @description: 常用 API 操作码枚举
  */
-public enum ResultCode implements IErrorCode {
+public enum ResultCode implements ErrorCode {
 
     SUCCESS(200, "操作成功"),
     FAILED(500, "操作失败"),

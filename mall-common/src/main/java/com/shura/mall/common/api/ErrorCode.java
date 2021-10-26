@@ -5,7 +5,7 @@ package com.shura.mall.common.api;
  * @date: 2021/10/10 9:40 下午
  * @description: 封装 API 的错误码
  */
-public interface IErrorCode {
+public interface ErrorCode {
 
     long getCode();
 

@@ -1,6 +1,6 @@
 package com.shura.mall.common.exception;
 
-import com.shura.mall.common.api.IErrorCode;
+import com.shura.mall.common.api.ErrorCode;
 
 /**
  * @author: Garvey
@@ -12,7 +12,7 @@ public class GatewayException extends RuntimeException {
     private long code;
     private String message;
 
-    public GatewayException(IErrorCode errorCode) {
+    public GatewayException(ErrorCode errorCode) {
         this.code = errorCode.getCode();
         this.message = errorCode.getMessage();
     }
