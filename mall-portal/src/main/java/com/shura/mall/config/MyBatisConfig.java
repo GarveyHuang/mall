@@ -11,6 +11,6 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  */
 @Configuration
 @EnableTransactionManagement
-@MapperScan({"com.shura.mall.mapper", "com.shura.mall.dao"})
+@MapperScan({"com.shura.mall.mapper", "com.shura.mall.protal.dao", "com.shura.mall.dao"})
 public class MyBatisConfig {
 }
