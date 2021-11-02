@@ -35,7 +35,7 @@ public class PortalProductCommentController {
     }
 
     @ApiOperation("发布产品评论")
-    @PostMapping(value = "/portal/sendComment")
+    @PostMapping(value = "/sendComment")
     public CommonResult sendProductComment(@RequestBody PmsComment pmsComment){
         Integer result = portalProductCommentService.insertProductComment(pmsComment);
         if(result > 0){
@@ -48,7 +48,7 @@ public class PortalProductCommentController {
     }
 
     @ApiOperation("产品评论回复")
-    @PostMapping(value = "/portal/sendCommentReply")
+    @PostMapping(value = "/sendCommentReply")
     public CommonResult sendProductCommentReply(@RequestBody PmsCommentReply commentReply){
         Integer result = portalProductCommentService.insertCommentReply(commentReply);
         if(result > 0){
