@@ -4,6 +4,7 @@ import com.shura.mall.common.api.CommonResult;
 import com.shura.mall.domain.PortalMemberInfo;
 import com.shura.mall.model.ums.UmsMember;
 import com.shura.mall.model.ums.UmsMemberReceiveAddress;
+import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -13,6 +14,7 @@ import java.util.List;
  * @Created: 2021/10/21
  * @Description:
  */
+@FeignClient(name = "mall-member", path = "/member")
 public interface UmsMemberFeignApi {
 
     @GetMapping(value = "/address/{id}")
