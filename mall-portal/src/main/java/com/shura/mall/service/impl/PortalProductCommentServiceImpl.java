@@ -49,7 +49,7 @@ public class PortalProductCommentServiceImpl implements PortalProductCommentServ
         if(status > 0){
             pmsComment.setCreateTime(new Date());
             pmsComment.setShowStatus(0);
-            pmsComment.setMemberNickName(member.getNickname());
+            pmsComment.setMemberNickname(member.getNickname());
             pmsComment.setMemberIcon(member.getIcon());
             return pmsMapper.insert(pmsComment);
         }
@@ -60,7 +60,7 @@ public class PortalProductCommentServiceImpl implements PortalProductCommentServ
     public Integer insertCommentReply(PmsCommentReply reply) {
         UmsMember member = umsMemberFeignApi.getMemberById().getData();
         reply.setCreateTime(new Date());
-        reply.setMemberNickName(member.getNickname());
+        reply.setMemberNickname(member.getNickname());
         reply.setMemberIcon(member.getIcon());
         reply.setType(0);
         return replyMapper.insert(reply);
