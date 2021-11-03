@@ -53,32 +53,6 @@ public class OmsPortalOrderController {
         return portalOrderService.generateOrder(orderParam,memberId);
     }
 
-    // TODO 秒杀功能暂未实现
-
-    @ApiOperation("秒杀订单确认#功能尚未实现")
-    @PostMapping(value = "/miaosha/generateConfirmOrder")
-    @ResponseBody
-    public CommonResult generateMiaoShaConfirmOrder(@RequestParam("productId") Long productId,
-                                                    String token,
-                                                    @RequestHeader("memberId") Long memberId) throws BusinessException {
-        return CommonResult.success(null);
-    }
-
-    @ApiOperation("秒杀订单创建#功能尚未实现")
-    @PostMapping(value = "/miaosha/generateOrder")
-    @ResponseBody
-    public CommonResult generateMiaoShaOrder(@RequestBody OrderParam orderParam,
-                                             String token,
-                                             @RequestHeader("memberId") Long memberId) throws BusinessException {
-        return CommonResult.success(null);
-    }
-
-    @ApiOperation("秒杀结果详情#功能尚未实现")
-    @GetMapping("/miaosha/result")
-    public CommonResult miaoShaResult(@RequestParam("productId") Long productId,@RequestHeader("memberId") Long memberId){
-        return CommonResult.success(null);
-    }
-
     @ApiOperation("查看订单详情")
     @GetMapping(value = "/orderDetail")
     public CommonResult orderDetail(@RequestParam Long orderId){
@@ -141,11 +115,11 @@ public class OmsPortalOrderController {
      *                 订单状态：0->待付款；1->待发货；2->已发货；3->已完成;4->已关闭；
      * @return
      */
-    @ApiOperation("会员订单查询#杨过添加")
+    @ApiOperation("会员订单查询")
     @ApiImplicitParams({
             @ApiImplicitParam(name = "memberId", value = "会员ID", required = true, paramType = "query", dataType = "integer"),
             @ApiImplicitParam(name = "status", value = "订单状态:0->待付款；1->待发货；2->已发货；3->已完成；4->已关闭",
-                    allowableValues = "0,1,2,3,4", paramType = "query", dataType = "integer")})
+                    allowableValues = "0，1，2，3，4", paramType = "query", dataType = "integer")})
     @PostMapping(value = "/list/userOrder")
     @ResponseBody
     public CommonResult<List<OmsOrderDetail>> findMemberOrderList(
@@ -183,7 +157,7 @@ public class OmsPortalOrderController {
 
     @ApiOperation("订单支付状态查询,手动查询#功能尚未实现")
     @ApiImplicitParams({@ApiImplicitParam(name = "payType", value = "支付方式:0->未支付,1->支付宝支付,2->微信支付",
-            allowableValues = "1,2", paramType = "query", dataType = "integer")})
+            allowableValues = "1，2", paramType = "query", dataType = "integer")})
     @PostMapping(value = "/tradeStatusQuery")
     @ResponseBody
     public CommonResult tradeStatusQuery(@RequestParam(value = "orderId") Long orderId,
