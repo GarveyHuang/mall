@@ -1,0 +1,20 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: mall-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          lower-case-service-id: true
+          enabled: true
+
+
+shura:
+  gateway:
+    shouldSkipUrls:
+      - /oauth/**
+      - /sso/**
+      - /home/**
+      - /pms/**
