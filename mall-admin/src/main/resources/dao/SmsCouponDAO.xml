@@ -5,7 +5,7 @@
     <resultMap id="couponItemParam" type="com.shura.mall.domain.sms.SmsCouponParam" extends="com.shura.mall.mapper.SmsCouponMapper.BaseResultMap">
         <collection property="productRelationList" columnPrefix="cpr_" resultMap="com.shura.mall.mapper.SmsCouponProductRelationMapper.BaseResultMap">
         </collection>
-        <collection property="productCategoryRelationList" columnPrefix="cpcr_" resultMap="com.tuling.tulingmall.mapper.SmsCouponProductCategoryRelationMapper.BaseResultMap">
+        <collection property="productCategoryRelationList" columnPrefix="cpcr_" resultMap="com.shura.mall.mapper.SmsCouponProductCategoryRelationMapper.BaseResultMap">
         </collection>
     </resultMap>
 
