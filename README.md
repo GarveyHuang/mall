@@ -23,8 +23,18 @@ TODO
 
 | 模块 | 名称  |
 | ------ | ------ |
-| mall-admin | 管理后台 |
-| mall-
+| mall-admin | 管理后台模块 |
+| mall-auth-center | 权限中心 |
+| mall-common | 公共模块 |
+| mall-coupons | 优惠券模块 |
+| mall-member | 会员模块 |
+| mall-order | 订单模块 |
+| mall-portal | 门户管理模块 |
+| mall-product | 商品模块 |
+| mall-search | 搜索模块 |
+| mall-seckill | 秒杀模块 |
+| mall-security | 安全认证模块 |
+| mall-gateway | 网关 |
 
 ### 技术栈
 
